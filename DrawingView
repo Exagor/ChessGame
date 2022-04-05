@@ -43,18 +43,15 @@ class CanonView @JvmOverloads constructor (context: Context, attributes: Attribu
         board.boardDistance= (w*7 / 8f)
         board.boardDebut = (h / 8f)
         board.boardFin = (h*7 / 8f)
-        board.setRect()
 
         cimetiere1.width = (w / 24f)
         cimetiere1.cimetiereHauteur= (w*7 / 8f)
         cimetiere1.cimetiereDebut = (h / 8f)
         cimetiere1.cimetiereFin = (h*7 / 8f)
-        cimetiere1.setRect()
 
         cimetiere2.cimetiereHauteur= (w*7 / 8f)
         cimetiere2.cimetiereDebut = (h / 8f)
         cimetiere2.cimetiereFin = (h*7 / 8f)
-        cimetiere2.setRect()
     }
 
     fun draw() {
