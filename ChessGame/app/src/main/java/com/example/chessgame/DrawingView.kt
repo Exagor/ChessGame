@@ -41,21 +41,25 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         screenHeight = h.toFloat()
 
         board.width = (w*13 / 13.3f)
-        board.boardHauteur= (h/192f)
-        board.boardFin = (h*7 / 8f)
+        board.boardHauteur= (h/180f)
+        board.boardFin = ((h*40/42f))
         board.boardDebut = (w / 80f)
-        board.boardFin = ((h*40/49f).toFloat())
+
+        board.setRect()
+
 
         cimetiere1.cimetiereDebut = (w / 80f)
         cimetiere1.cimetiereHauteur = (h/198f)
-        cimetiere1.cimetiereFin = (h*2 / 30f)
+        cimetiere1.cimetiereFin = (h*2 / 16f)
         cimetiere1.width = (w*13 / 13.3f)
+        cimetiere1.setRect()
+
 
         cimetiere2.width = (w*13 / 13.3f)
         cimetiere2.cimetiereDebut = (w / 80f)
-        cimetiere2.cimetiereHauteur= ((h*40/43f).toFloat())
-        cimetiere2.cimetiereFin = ((h*40/ 40.3f).toFloat())
-
+        cimetiere2.cimetiereHauteur= ((h*40/46f))
+        cimetiere2.cimetiereFin = ((h*40/ 40.3f))
+        cimetiere2.setRect()
 
 
     }
