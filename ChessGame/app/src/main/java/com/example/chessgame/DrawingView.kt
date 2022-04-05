@@ -10,9 +10,9 @@ import android.view.SurfaceView
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
-    val board = Board()
+    val board = Board( 0f, 0f, 0f, 0f,this)
     val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this)
-    val cimetiere2 =Cimetiere(10f, 0f, 0f, 0f, this)
+    val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this)
     val backgroundPaint = Paint()
     var screenWidth = 0f
     var screenHeight = 0f
@@ -25,7 +25,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         drawing = false
         thread.join()
     }
-    fun resume() {
+    fun resume(){
         drawing = true
         thread = Thread(this)
         thread.start()
@@ -39,20 +39,27 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         super.onSizeChanged(w, h, oldw, oldh)
         screenWidth = w.toFloat()
         screenHeight = h.toFloat()
-        board.width = (w / 24f)
-        board.boardDistance= (w*7 / 8f)
-        board.boardDebut = (h / 8f)
+
+        board.width = (w*13 / 13.3f)
+        board.boardHauteur= (h/192f)
         board.boardFin = (h*7 / 8f)
+        board.boardDebut = (w / 80f)
+        board.boardFin = ((h*40/49f).toFloat())
 
-        cimetiere1.width = (w / 24f)
-        cimetiere1.cimetiereHauteur= (w*7 / 8f)
-        cimetiere1.cimetiereDebut = (h / 8f)
-        cimetiere1.cimetiereFin = (h*7 / 8f)
+        cimetiere1.cimetiereDebut = (w / 80f)
+        cimetiere1.cimetiereHauteur = (h/198f)
+        cimetiere1.cimetiereFin = (h*2 / 30f)
+        cimetiere1.width = (w*13 / 13.3f)
 
-        cimetiere2.cimetiereHauteur= (w*7 / 8f)
-        cimetiere2.cimetiereDebut = (h / 8f)
-        cimetiere2.cimetiereFin = (h*7 / 8f)
+        cimetiere2.width = (w*13 / 13.3f)
+        cimetiere2.cimetiereDebut = (w / 80f)
+        cimetiere2.cimetiereHauteur= ((h*40/43f).toFloat())
+        cimetiere2.cimetiereFin = ((h*40/ 40.3f).toFloat())
+
+
+
     }
+
 
     fun draw() {
         if (holder.surface.isValid) {
