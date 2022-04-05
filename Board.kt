@@ -22,20 +22,16 @@ class Board() {
 
 
 
-
     var casePaint = Paint()
-    For( i in case.indices ){
-        r = (x1=Int,y1=Int,x2=Int,y2=Int)
-        if (i%2==0){
-                 casePaint.color = Color.BLACK
+    fun draw(canvas: Canvas) {
+        for( i in case.indices ){
+            var r = (x1=Int,y1=Int,x2=Int,y2=Int)
+            if (i%2==0){
+                casePaint.color = Color.BLACK
         }
-        else{ 
-                 casePaint.color = Color.WHITE
+            else{
+                casePaint.color = Color.WHITE
         }
-
-        fun draw(canvas: Canvas) {
             canvas.drawRect(r, casePaint)
         }
     }
-
-}
