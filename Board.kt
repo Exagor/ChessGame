@@ -24,8 +24,12 @@ class Board() {
 
     var casePaint = Paint()
     fun draw(canvas: Canvas) {
+        var x1 =0f
+        var y1 =0f
+        var x2=x1+width
+        var y2=y1-height
         for( i in case.indices ){
-            var r = (x1=Int,y1=Int,x2=Int,y2=Int)
+            var r = RectF(x1=Int,y1=Int,x2=Int,y2=Int)
             if (i%2==0){
                 casePaint.color = Color.BLACK
         }
