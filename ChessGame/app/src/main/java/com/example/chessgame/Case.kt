@@ -1,4 +1,4 @@
-/*package com.example.jeu_echec
+package com.example.chessgame/*
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint

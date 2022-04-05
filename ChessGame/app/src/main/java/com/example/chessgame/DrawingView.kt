@@ -1,4 +1,4 @@
-package com.example.jeu_echec
+package com.example.chessgame
 
 import android.content.Context
 import android.graphics.Canvas

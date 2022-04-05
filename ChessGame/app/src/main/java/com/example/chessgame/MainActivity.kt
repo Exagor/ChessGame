@@ -1,4 +1,4 @@
-package com.example.jeu_echec
+package com.example.chessgame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
