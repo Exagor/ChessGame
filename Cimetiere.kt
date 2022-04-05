@@ -5,7 +5,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
 
-class Cimetiere(var cimetiereHauteur: Float, var cimetiereDebut: Float, var cimetiereFin: Float, var width: Float, var view: CanonView)
+class Cimetiere(var cimetiereHauteur: Float, var cimetiereDebut: Float, var cimetiereFin: Float, var width: Float, var view: DrawingView)
 {
     val r = RectF(cimetiereDebut, cimetiereHauteur, cimetiereFin, cimetiereHauteur+width)
     val paint = Paint()
