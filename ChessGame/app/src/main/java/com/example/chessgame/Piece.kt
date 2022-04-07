@@ -1,13 +1,9 @@
 package com.example.chessgame
 
-abstract class Piece(){
-    abstract var position: String //pas sur de mettre en string pour la position, plutot mettre un couple
-    abstract var color: String
-
-    fun bouger(){
-
-    }
-    fun etreMange(){
-
-    }
+abstract class Piece(var position: Pair <Int, Int>, val color: String, var possibleMoves: MutableList<Pair<Int, Int>>){
+     fun bouger(newPos: Pair<Int,Int>) {
+        if (newPos in possibleMoves) position = newPos
+     }
+    abstract fun etreMange()
+    abstract fun calculateMoves()
 }
