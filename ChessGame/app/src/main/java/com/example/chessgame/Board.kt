@@ -17,7 +17,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var boardFin: Float,
 
     var paint = Paint()
     fun draw(canvas: Canvas) {
-        paint.color = Color.BLUE
+        paint.color = Color.WHITE
         canvas.drawRect(board, paint)
     }
 

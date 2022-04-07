@@ -44,16 +44,13 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         board.boardHauteur= (h/180f)
         board.boardFin = ((h*40/42f))
         board.boardDebut = (w / 80f)
-
         board.setRect()
-
 
         cimetiere1.cimetiereDebut = (w / 80f)
         cimetiere1.cimetiereHauteur = (h/198f)
         cimetiere1.cimetiereFin = (h*2 / 16f)
         cimetiere1.width = (w*13 / 13.3f)
         cimetiere1.setRect()
-
 
         cimetiere2.width = (w*13 / 13.3f)
         cimetiere2.cimetiereDebut = (w / 80f)
@@ -73,14 +70,24 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             board.draw(canvas)
             cimetiere1.draw(canvas)
             cimetiere2.draw(canvas)
+
+            for (i in 0..8){
+                for (j in 0..8){
+
+                }
+            }
+
             holder.unlockCanvasAndPost(canvas)
         }
     }
+    fun drawCase(canvas:Canvas, ){
 
+    }
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,
                                 width: Int, height: Int) {}
 
     override fun surfaceCreated(holder: SurfaceHolder) {}
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {}
+
 }
