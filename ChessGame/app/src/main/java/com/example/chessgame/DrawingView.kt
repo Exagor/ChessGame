@@ -41,9 +41,9 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         screenHeight = h.toFloat()
 
         board.width = (w*13 / 13.3f)
-        board.boardHauteur= (h/180f)
-        board.boardFin = ((h*40/42f))
+        board.boardHauteur= (h*2 / 16f)
         board.boardDebut = (w / 80f)
+        board.boardFin = ((h*40/46f))
         board.setRect()
 
         cimetiere1.cimetiereDebut = (w / 80f)
@@ -67,14 +67,23 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             canvas = holder.lockCanvas()
             canvas.drawRect(0f, 0f, canvas.width.toFloat(),
                 canvas.height.toFloat(), backgroundPaint)
-            board.draw(canvas)
+            //board.draw(canvas)
             cimetiere1.draw(canvas)
             cimetiere2.draw(canvas)
 
-            for (i in 0..8){
-                for (j in 0..8){
-
+            var dx = (board.width)/8
+            var dy = (board.boardFin-board.boardHauteur)/8
+            var x_i = board.boardDebut
+            var y_i = board.boardHauteur
+            for (i in 1..8){
+                for (j in 1..8){
+                    val case = Case(i,j,null, x_i,y_i,x_i+dx,y_i+dy, this)
+                    case.setRect()
+                    case.draw(canvas)
+                    x_i+=dx
                 }
+                y_i+=dy
+                x_i=board.boardDebut
             }
 
             holder.unlockCanvasAndPost(canvas)

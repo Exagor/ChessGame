@@ -7,8 +7,8 @@ import android.graphics.RectF
 
 
 
-class Board(var boardHauteur: Float, var boardDebut: Float, var boardFin: Float, var width: Float, var view: DrawingView) {
-    var board = RectF(boardDebut, boardHauteur, boardDebut+width, boardFin)
+class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, var boardFin: Float,var view: DrawingView) {
+    var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
 
     fun setRect() {
         board.set(boardDebut, boardHauteur,
@@ -17,7 +17,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var boardFin: Float,
 
     var paint = Paint()
     fun draw(canvas: Canvas) {
-        paint.color = Color.WHITE
+        paint.color = Color.BLACK
         canvas.drawRect(board, paint)
     }
 
