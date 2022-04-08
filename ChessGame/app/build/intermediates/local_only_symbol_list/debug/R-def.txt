@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+color beige
 color black
 color purple_200
 color purple_500
@@ -7,8 +8,20 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable bishop_black
+drawable bishop_white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable king_black
+drawable king_white
+drawable knight_black
+drawable knight_white
+drawable pawn_black
+drawable pawn_white
+drawable queen_black
+drawable queen_white
+drawable rook_black
+drawable rook_white
 id vMain
 layout activity_main
 mipmap ic_launcher

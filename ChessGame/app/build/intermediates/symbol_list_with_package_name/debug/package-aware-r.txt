@@ -1211,6 +1211,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color beige
 color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -2437,6 +2438,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bishop_black
+drawable bishop_white
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2461,6 +2464,10 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable king_black
+drawable king_white
+drawable knight_black
+drawable knight_white
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2502,6 +2509,12 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pawn_black
+drawable pawn_white
+drawable queen_black
+drawable queen_white
+drawable rook_black
+drawable rook_white
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
