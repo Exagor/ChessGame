@@ -18,9 +18,22 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var screenHeight = 0f
     var drawing = false
     lateinit var thread: Thread
-    init {
-        backgroundPaint.color = Color.WHITE
-    }
+
+    private val imgpiece = setOf(
+        R.drawable.bishop_black,
+        R.drawable.bishop_white,
+        R.drawable.king_black,
+        R.drawable.king_white,
+        R.drawable.queen_black,
+        R.drawable.queen_white,
+        R.drawable.rook_black,
+        R.drawable.rook_white,
+        R.drawable.knight_black,
+        R.drawable.knight_white,
+        R.drawable.pawn_black,
+        R.drawable.pawn_white,
+    )
+
     fun pause() {
         drawing = false
         thread.join()
@@ -89,9 +102,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             holder.unlockCanvasAndPost(canvas)
         }
     }
-    fun drawCase(canvas:Canvas, ){
 
-    }
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,
                                 width: Int, height: Int) {}
 

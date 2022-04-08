@@ -15,7 +15,8 @@ class Case(var col:Int, var row:Int,piece: Piece?, var x1:Float,var y1: Float,va
 
     fun draw(canvas: Canvas) {
         if ((col+row)%2==0){
-            paint.color= Color.LTGRAY
+            //paint.color= Color.LTGRAY
+            paint.color = Color.parseColor("#BDB0B0")
         }
         else{
             paint.color = Color.BLACK
