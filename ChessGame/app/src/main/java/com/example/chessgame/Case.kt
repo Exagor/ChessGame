@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
 
-class Case(var cornerdownl: Float,var cornerupl: Float, var cornerdownr: Float, var cornerupr: Float, val color:Int, val posx: Int, val posy:Int ) {
+class Case(var cornerdownl: Float,var cornerupl: Float, var cornerdownr: Float, var cornerupr: Float, val color:Int, val posx: Int, val posy:Int, val row: Int, val col:Int, var piece:Piece) {
     var case = RectF(cornerdownl, cornerupl, cornerdownr, cornerupr)
     val paint = Paint()
     val position = arrayOf(posx,posy)
