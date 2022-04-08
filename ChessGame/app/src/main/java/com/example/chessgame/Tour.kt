@@ -1,12 +1,10 @@
 package com.example.chessgame
 
-class Tour(position: Pair<Int, Int>, color: String, moves: MutableList<Pair<Int,Int>>): Piece(position, color, moves) {
+class Tour(position: Case, color: String): Piece(position, color) {
 
-    override fun calculateMoves(){
+    override fun bouger(newPos: Case){
 
     }
 
-    override fun etreMange() {
-        TODO("Not yet implemented")
-    }
+
 }
