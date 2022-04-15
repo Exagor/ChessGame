@@ -1,12 +1,10 @@
 package com.example.chessgame
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.RectF
+import android.graphics.*
 
-class Case(var col:Int, var row:Int,var piece: Piece?, var x1:Float,var y1: Float,var x2:Float,var y2:Float, view: DrawingView) {
+class Case(var col:Int, var row:Int,var piece: Piece?, var x1:Float,var y1: Float,var x2:Float,var y2:Float, view: DrawingView, var image: Int) {
     var case = RectF(x1, y1, x2, y2)
     val paint = Paint()
+    val bmp = BitmapFactory.decodeResource(view.getResources(), image)
 
     private val whitepieces = listOf(
         R.drawable.bishop_white,
@@ -36,6 +34,7 @@ class Case(var col:Int, var row:Int,var piece: Piece?, var x1:Float,var y1: Floa
             paint.color = Color.BLACK
         }
         canvas.drawRect(case, paint)
+        canvas.drawBitmap(bmp,null,case,null)
     }
 
 

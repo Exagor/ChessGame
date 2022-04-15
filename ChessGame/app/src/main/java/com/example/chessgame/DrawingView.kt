@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import java.util.*
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
@@ -90,7 +91,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             var y_i = board.boardHauteur
             for (i in 1..8){
                 for (j in 1..8){
-                    val case = Case(i,j,null, x_i,y_i,x_i+dx,y_i+dy, this)
+                    val case = Case(i,j,null, x_i,y_i,x_i+dx,y_i+dy, this , getResources().getIdentifier("pawn_white","drawable",getContext().getPackageName()))
                     case.setRect()
                     case.draw(canvas)
                     x_i+=dx
