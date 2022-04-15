@@ -1,9 +1,13 @@
 package com.example.chessgame
 
-class Reine(position: Case, color: String): Piece(position, color) {
+class Reine(position: Case, color: String,): Piece(position, color) {
 
     override fun bouger(newPos: Case){
 
+    }
+
+    override fun mourir() {
+        TODO("Not yet implemented")
     }
 
 

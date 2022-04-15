@@ -11,8 +11,8 @@ import android.view.SurfaceView
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
     val board = Board( 0f, 0f, 0f, 0f,this)
-    val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this)
-    val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this)
+    val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, null)
+    val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, null)
     val backgroundPaint = Paint()
     var screenWidth = 0f
     var screenHeight = 0f

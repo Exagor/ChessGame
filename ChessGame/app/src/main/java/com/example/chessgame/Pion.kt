@@ -35,5 +35,9 @@ class Pion(position: Case, color: String): Piece(position, color) {
         }
     }
 
+    override fun mourir() {
+        TODO("Not yet implemented")
+    }
+
 
 }
