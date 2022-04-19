@@ -2,6 +2,7 @@ package com.example.chessgame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 
 class MainActivity: AppCompatActivity() {
 
@@ -11,6 +12,8 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         drawingView = findViewById<DrawingView>(R.id.vMain)
+
+
     }
 
     override fun onPause() {

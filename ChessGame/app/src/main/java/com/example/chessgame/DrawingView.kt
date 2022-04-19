@@ -1,25 +1,32 @@
 package com.example.chessgame
-
+import android.app.Application
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.os.Handler
+import android.os.Looper
 import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import android.widget.Toast
 import java.util.*
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
+    //création du board
     val board = Board( 0f, 0f, 0f, 0f,this)
+    // création des cimetières
     val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, null)
     val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, null)
     val backgroundPaint = Paint()
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = false
-    lateinit var thread: Thread
+    var init = true
 
+    lateinit var thread: Thread
+    var cases = mutableListOf<Case>()
     private val imgpiece = setOf(
         R.drawable.bishop_black,
         R.drawable.bishop_white,
@@ -35,6 +42,57 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         R.drawable.pawn_white,
     )
 
+    fun initialisation(){ // crée les cases du board et les pièces
+        if (holder.surface.isValid) {
+            canvas = holder.lockCanvas()
+            canvas.drawRect(0f, 0f, canvas.width.toFloat(),
+                canvas.height.toFloat(), backgroundPaint)
+            //board.draw(canvas)
+            cimetiere1.draw(canvas)
+            cimetiere2.draw(canvas)
+            var compteur = 0
+            var dx = (board.width)/8
+            var dy = (board.boardFin-board.boardHauteur)/8
+            var x_i = board.boardDebut
+            var y_i = board.boardHauteur
+            for (i in 1..8) {
+                for (j in 1..8) {
+                    var piece : Piece? = null
+                    var image : Int? = null
+                    // on ajoute crée pions blancs
+                    if (i==7){
+                        image = R.drawable.pawn_white
+                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, image, context))
+                        piece = Pion(cases[compteur], "white")
+                        cases[compteur].piece = piece
+
+                    }
+                    if (i==2){
+                        image = R.drawable.pawn_black
+                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, image, context))
+                        piece = Pion(cases[compteur], "black")
+                        cases[compteur].piece = piece
+
+                    }
+
+                    else cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, image, context))
+                    compteur+=1
+                    x_i+=dx
+                }
+                y_i+=dy
+                x_i=board.boardDebut
+            }
+            for (case in cases){
+                case.setRect()
+                case.draw(canvas)
+            }
+
+            holder.unlockCanvasAndPost(canvas)
+        }
+
+    }
+
+
     fun pause() {
         drawing = false
         thread.join()
@@ -44,8 +102,11 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         thread = Thread(this)
         thread.start()
     }
+
     override fun run() {
+        initialisation()
         while (drawing) {
+
             draw()
         }
     }
@@ -79,25 +140,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     fun draw() {
         if (holder.surface.isValid) {
             canvas = holder.lockCanvas()
-            canvas.drawRect(0f, 0f, canvas.width.toFloat(),
-                canvas.height.toFloat(), backgroundPaint)
-            //board.draw(canvas)
+
             cimetiere1.draw(canvas)
             cimetiere2.draw(canvas)
-
-            var dx = (board.width)/8
-            var dy = (board.boardFin-board.boardHauteur)/8
-            var x_i = board.boardDebut
-            var y_i = board.boardHauteur
-            for (i in 1..8){
-                for (j in 1..8){
-                    val case = Case(i,j,null, x_i,y_i,x_i+dx,y_i+dy, this , getResources().getIdentifier("pawn_white","drawable",getContext().getPackageName()))
-                    case.setRect()
-                    case.draw(canvas)
-                    x_i+=dx
-                }
-                y_i+=dy
-                x_i=board.boardDebut
+            for (case in cases){
+                case.setRect()
+                case.draw(canvas)
             }
 
             holder.unlockCanvasAndPost(canvas)

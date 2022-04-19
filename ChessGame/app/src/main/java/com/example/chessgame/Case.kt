@@ -1,10 +1,12 @@
 package com.example.chessgame
+import android.content.Context
+import android.content.res.Resources
 import android.graphics.*
 
-class Case(var col:Int, var row:Int,var piece: Piece?, var x1:Float,var y1: Float,var x2:Float,var y2:Float, view: DrawingView, var image: Int) {
+class Case(var col:Int, var row:Int, var x1:Float,var y1: Float,var x2:Float,var y2:Float, val view: DrawingView, var image: Int?, val context : Context) {
     var case = RectF(x1, y1, x2, y2)
     val paint = Paint()
-    val bmp = BitmapFactory.decodeResource(view.getResources(), image)
+    var piece: Piece? = null
 
     private val whitepieces = listOf(
         R.drawable.bishop_white,
@@ -34,7 +36,11 @@ class Case(var col:Int, var row:Int,var piece: Piece?, var x1:Float,var y1: Floa
             paint.color = Color.BLACK
         }
         canvas.drawRect(case, paint)
-        canvas.drawBitmap(bmp,null,case,null)
+        if (image != null) {
+            val bmp = BitmapFactory.decodeResource(context.resources, image!!)
+            canvas?.drawBitmap(bmp!!, null, case, null)
+        }
+
     }
 
 
