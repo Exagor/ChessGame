@@ -1,7 +1,7 @@
 package com.example.chessgame
 
 class Pion(position: Case, color: String): Piece(position, color) {
-
+    override var image = if (color == "white") R.drawable.pawn_white else R.drawable.pawn_black
     override fun bouger(newPos:Case): Boolean {
         var fait = false
         if (color == "white"){

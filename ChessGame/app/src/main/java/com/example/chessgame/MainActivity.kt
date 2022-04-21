@@ -13,7 +13,6 @@ class MainActivity: AppCompatActivity() {
         setContentView(R.layout.activity_main)
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
-
     }
 
     override fun onPause() {

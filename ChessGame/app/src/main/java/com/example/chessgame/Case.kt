@@ -3,7 +3,7 @@ import android.content.Context
 import android.content.res.Resources
 import android.graphics.*
 
-class Case(var col:Int, var row:Int, var x1:Float,var y1: Float,var x2:Float,var y2:Float, val view: DrawingView, var image: Int?, val context : Context) {
+class Case(var col:Int, var row:Int, var x1:Float,var y1: Float,var x2:Float,var y2:Float, val view: DrawingView, val context : Context) {
     var case = RectF(x1, y1, x2, y2)
     val paint = Paint()
     var piece: Piece? = null
@@ -36,7 +36,8 @@ class Case(var col:Int, var row:Int, var x1:Float,var y1: Float,var x2:Float,var
             paint.color = Color.BLACK
         }
         canvas.drawRect(case, paint)
-        if (image != null) {
+        if (piece != null) {
+            var image = piece!!.image
             val bmp = BitmapFactory.decodeResource(context.resources, image!!)
             canvas?.drawBitmap(bmp!!, null, case, null)
         }

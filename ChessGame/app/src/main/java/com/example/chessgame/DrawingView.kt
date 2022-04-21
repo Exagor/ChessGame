@@ -22,10 +22,10 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     val backgroundPaint = Paint()
     var screenWidth = 0f
     var screenHeight = 0f
-    var drawing = false
+    var drawing = true
     var init = true
 
-    lateinit var thread: Thread
+
     var cases = mutableListOf<Case>()
     private val imgpiece = setOf(
         R.drawable.bishop_black,
@@ -43,7 +43,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     )
 
     fun initialisation(){ // crée les cases du board et les pièces
-        if (holder.surface.isValid) {
+        if (holder.surface.isValid && cases.size < 64)  {
             canvas = holder.lockCanvas()
             canvas.drawRect(0f, 0f, canvas.width.toFloat(),
                 canvas.height.toFloat(), backgroundPaint)
@@ -62,20 +62,20 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                     // on ajoute crée pions blancs
                     if (i==7){
                         image = R.drawable.pawn_white
-                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, image, context))
+                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                         piece = Pion(cases[compteur], "white")
                         cases[compteur].piece = piece
 
                     }
                     if (i==2){
                         image = R.drawable.pawn_black
-                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, image, context))
+                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                         piece = Pion(cases[compteur], "black")
                         cases[compteur].piece = piece
 
                     }
 
-                    else cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, image, context))
+                    else cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                     compteur+=1
                     x_i+=dx
                 }
@@ -91,8 +91,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         }
 
     }
-
-
+    lateinit var thread: Thread
     fun pause() {
         drawing = false
         thread.join()
@@ -101,12 +100,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         drawing = true
         thread = Thread(this)
         thread.start()
+
     }
 
     override fun run() {
         initialisation()
         while (drawing) {
-
             draw()
         }
     }
