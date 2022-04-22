@@ -29,11 +29,14 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
     var cases = mutableListOf<Case>()
 
-
-    fun initialisation(){ // crée les cases du board et les pièces
+    init{
+        backgroundPaint.color = Color.CYAN
+    }
+    fun initialisation() { // crée les cases du board et les pièces
+        if(cases.size < 64){
             var compteur = 0
-            var dx = (board.width)/8
-            var dy = (board.boardFin-board.boardHauteur)/8
+            var dx = (board.width) / 8
+            var dy = (board.boardFin - board.boardHauteur) / 8
             var x_i = board.boardDebut
             var y_i = board.boardHauteur
             for (i in 1..8) {
@@ -59,7 +62,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 y_i += dy
                 x_i = board.boardDebut
             }
-
+        }
     }
     lateinit var thread: Thread
     fun pause() {
@@ -79,6 +82,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             draw()
         }
     }
+
     override fun onSizeChanged(w:Int, h:Int, oldw:Int, oldh:Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         screenWidth = w.toFloat()
@@ -135,12 +139,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
-                if (onfocus == null && case.piece != null){
+                if(onfocus == null && case.piece != null) {
                     onfocus = case
                     case.paint.color = Color.MAGENTA
-
                 }
-                else if (onfocus != null){
+
+                 if (onfocus != null){
                     onfocus!!.piece!!.bouger(case)
                 }
                 break
