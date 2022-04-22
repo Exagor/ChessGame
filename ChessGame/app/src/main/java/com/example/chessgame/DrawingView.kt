@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.Toast
@@ -23,20 +24,13 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = true
-
+    var onfocus : Case? = null
 
 
     var cases = mutableListOf<Case>()
 
 
     fun initialisation(){ // crée les cases du board et les pièces
-        if (holder.surface.isValid && cases.size < 64)  {
-            canvas = holder.lockCanvas()
-            canvas.drawRect(0f, 0f, canvas.width.toFloat(),
-                canvas.height.toFloat(), backgroundPaint)
-            //board.draw(canvas)
-            cimetiere1.draw(canvas)
-            cimetiere2.draw(canvas)
             var compteur = 0
             var dx = (board.width)/8
             var dy = (board.boardFin-board.boardHauteur)/8
@@ -44,36 +38,27 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             var y_i = board.boardHauteur
             for (i in 1..8) {
                 for (j in 1..8) {
-                    var piece : Piece?
+                    var piece: Piece?
 
                     // on ajoute crée pions blancs
-                    if (i==7){
-                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
+                    if (i == 7) {
+                        cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                         piece = Pion(cases[compteur], "white")
                         cases[compteur].piece = piece
 
                     }
-                    if (i==2){
-                        cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
+                    if (i == 2) {
+                        cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                         piece = Pion(cases[compteur], "black")
                         cases[compteur].piece = piece
 
-                    }
-
-                    else cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
-                    compteur+=1
-                    x_i+=dx
+                    } else cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
+                    compteur += 1
+                    x_i += dx
                 }
-                y_i+=dy
-                x_i=board.boardDebut
+                y_i += dy
+                x_i = board.boardDebut
             }
-            for (case in cases){
-                case.setRect()
-                case.draw(canvas)
-            }
-
-            holder.unlockCanvasAndPost(canvas)
-        }
 
     }
     lateinit var thread: Thread
@@ -83,9 +68,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
     fun resume() {
         drawing = true
-        thread = Thread{
-            run()
-        }
+        thread = Thread(this)
         thread.start()
 
     }
@@ -138,10 +121,41 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         }
     }
 
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        when (event!!.action){
+            MotionEvent.ACTION_DOWN -> {
+                val x = event.rawX
+                val y = event.rawY -75
+                checkCase(x, y)
+            }
+        }
+    return true
+    }
+    fun checkCase(x:Float, y:Float) {
+
+        for (case in cases) {
+            if (case.rectangle.contains(x,y)){
+                if (onfocus == null && case.piece != null){
+                    onfocus = case
+                    case.paint.color = Color.MAGENTA
+
+                }
+                else if (onfocus != null){
+                    onfocus!!.piece!!.bouger(case)
+                }
+                break
+            }
+        }
+
+
+    }
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,
                                 width: Int, height: Int) {}
 
-    override fun surfaceCreated(holder: SurfaceHolder) {}
+    override fun surfaceCreated(holder: SurfaceHolder) {
+        thread = Thread(this)
+        thread.start()
+    }
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {}
 
