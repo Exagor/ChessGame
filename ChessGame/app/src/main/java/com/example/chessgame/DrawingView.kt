@@ -23,24 +23,11 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = true
-    var init = true
+
 
 
     var cases = mutableListOf<Case>()
-    private val imgpiece = setOf(
-        R.drawable.bishop_black,
-        R.drawable.bishop_white,
-        R.drawable.king_black,
-        R.drawable.king_white,
-        R.drawable.queen_black,
-        R.drawable.queen_white,
-        R.drawable.rook_black,
-        R.drawable.rook_white,
-        R.drawable.knight_black,
-        R.drawable.knight_white,
-        R.drawable.pawn_black,
-        R.drawable.pawn_white,
-    )
+
 
     fun initialisation(){ // crée les cases du board et les pièces
         if (holder.surface.isValid && cases.size < 64)  {
@@ -57,18 +44,16 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             var y_i = board.boardHauteur
             for (i in 1..8) {
                 for (j in 1..8) {
-                    var piece : Piece? = null
-                    var image : Int? = null
+                    var piece : Piece?
+
                     // on ajoute crée pions blancs
                     if (i==7){
-                        image = R.drawable.pawn_white
                         cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                         piece = Pion(cases[compteur], "white")
                         cases[compteur].piece = piece
 
                     }
                     if (i==2){
-                        image = R.drawable.pawn_black
                         cases.add (Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
                         piece = Pion(cases[compteur], "black")
                         cases[compteur].piece = piece
@@ -96,9 +81,11 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         drawing = false
         thread.join()
     }
-    fun resume(){
+    fun resume() {
         drawing = true
-        thread = Thread(this)
+        thread = Thread{
+            run()
+        }
         thread.start()
 
     }
