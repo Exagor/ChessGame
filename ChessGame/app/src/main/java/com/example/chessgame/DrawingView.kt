@@ -84,6 +84,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     fun resume() {
         drawing = true
         thread = Thread{
+            initialisation()
             run()
         }
         thread.start()
@@ -91,7 +92,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     override fun run() {
-        initialisation()
+
         while (drawing) {
             draw()
         }
