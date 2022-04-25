@@ -19,7 +19,7 @@ class MainActivity: AppCompatActivity() {
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
-        var hide_frag = false
+        var hide_frag = true
 
         tombstone.setOnClickListener {
             val imageFragment = ImageFragment()

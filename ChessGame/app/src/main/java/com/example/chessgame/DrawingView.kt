@@ -88,6 +88,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 val x = event.rawX
                 val y = event.rawY
                 checkCase(x, y)
+                println("$x $y")
             }
         }
     return true
@@ -96,9 +97,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     fun checkCase(x:Float, y:Float){
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
+                val col = case.col
+                val row = case.row
+                println("col: $col " + "row: $row")
                 if(onfocus == null && case.piece != null) {
                     onfocus = case
-                    case.paint.color = Color.MAGENTA
+                    case.focus = true
                 }
                  if (onfocus != null){
                     onfocus!!.piece!!.bouger(case)
