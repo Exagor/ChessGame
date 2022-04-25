@@ -2,7 +2,7 @@ package com.example.chessgame
 import android.content.Context
 import android.graphics.*
 
-class Case(var col:Int, var row:Int, var x1:Float,var y1: Float,var x2:Float,var y2:Float, val view: DrawingView, val context : Context) {
+class Case(var row:Int, var col:Int, var x1:Float,var y1: Float,var x2:Float,var y2:Float, val view: DrawingView, val context : Context) {
     var rectangle = RectF(x1, y1, x2, y2)
     val paint = Paint()
     var piece: Piece? = null
@@ -36,9 +36,9 @@ class Case(var col:Int, var row:Int, var x1:Float,var y1: Float,var x2:Float,var
         }
         canvas.drawRect(rectangle, paint)
         if (piece != null) {
-            var image = piece!!.image
-            val bmp = BitmapFactory.decodeResource(context.resources, image!!)
-            canvas?.drawBitmap(bmp!!, null, rectangle, null)
+            val image = piece!!.image
+            val bmp = BitmapFactory.decodeResource(context.resources, image)
+            canvas.drawBitmap(bmp!!, null, rectangle, null)
         }
 
     }

@@ -22,8 +22,13 @@ drawable queen_black
 drawable queen_white
 drawable rook_black
 drawable rook_white
+drawable tombstone
+id fragment_container
+id image_view
+id tombstone
 id vMain
 layout activity_main
+layout layout_image_fragment
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

@@ -2517,6 +2517,7 @@ drawable rook_black
 drawable rook_white
 drawable test_custom_background
 drawable test_level_drawable
+drawable tombstone
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -2710,6 +2711,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2733,6 +2735,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image_view
 id immediateStop
 id included
 id info
@@ -2962,6 +2965,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id tombstone
 id top
 id topPanel
 id touch_outside
@@ -3098,6 +3102,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout layout_image_fragment
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

@@ -16,55 +16,19 @@ import java.util.*
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
     //création du board
-    val board = Board( 0f, 0f, 0f, 0f,this)
+    val board = Board( 0f, 0f, 0f, 0f,this, context)
     // création des cimetières
     val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, null)
     val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, null)
-    val backgroundPaint = Paint()
     var screenWidth = 0f
     var screenHeight = 0f
-    var drawing = true
+    var drawing = false
     var onfocus : Case? = null
-
-
-    var cases = mutableListOf<Case>()
-
-    init{
-        backgroundPaint.color = Color.CYAN
-    }
-    fun initialisation() { // crée les cases du board et les pièces
-        if(cases.size < 64){
-            var compteur = 0
-            var dx = (board.width) / 8
-            var dy = (board.boardFin - board.boardHauteur) / 8
-            var x_i = board.boardDebut
-            var y_i = board.boardHauteur
-            for (i in 1..8) {
-                for (j in 1..8) {
-                    var piece: Piece?
-
-                    // on ajoute crée pions blancs
-                    if (i == 7) {
-                        cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
-                        piece = Pion(cases[compteur], "white")
-                        cases[compteur].piece = piece
-
-                    }
-                    if (i == 2) {
-                        cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
-                        piece = Pion(cases[compteur], "black")
-                        cases[compteur].piece = piece
-
-                    } else cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, this, context))
-                    compteur += 1
-                    x_i += dx
-                }
-                y_i += dy
-                x_i = board.boardDebut
-            }
-        }
-    }
     lateinit var thread: Thread
+    lateinit var cases : MutableList<Case>
+
+
+
     fun pause() {
         drawing = false
         thread.join()
@@ -77,9 +41,9 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     override fun run() {
-        initialisation()
+        cases = board.cases
         while (drawing) {
-            draw()
+           draw()
         }
     }
 
@@ -105,22 +69,15 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         cimetiere2.cimetiereHauteur= ((h*40/46f))
         cimetiere2.cimetiereFin = ((h*40/ 40.3f))
         cimetiere2.setRect()
-
+        board.initialisation()
+        cases = board.cases
 
     }
 
-
-    fun draw() {
+     fun draw() {
         if (holder.surface.isValid) {
             canvas = holder.lockCanvas()
-
-            cimetiere1.draw(canvas)
-            cimetiere2.draw(canvas)
-            for (case in cases){
-                case.setRect()
-                case.draw(canvas)
-            }
-
+            board.draw(canvas)
             holder.unlockCanvasAndPost(canvas)
         }
     }
@@ -129,24 +86,24 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
                 val x = event.rawX
-                val y = event.rawY -75
+                val y = event.rawY
                 checkCase(x, y)
             }
         }
     return true
     }
-    fun checkCase(x:Float, y:Float) {
 
+    fun checkCase(x:Float, y:Float) {
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
                 if(onfocus == null && case.piece != null) {
                     onfocus = case
                     case.paint.color = Color.MAGENTA
                 }
-
                  if (onfocus != null){
                     onfocus!!.piece!!.bouger(case)
                 }
+                else case.paint.color = Color.MAGENTA
                 break
             }
         }

@@ -4,6 +4,7 @@ package com.example.chessgame
      override var image= if (color == "white") R.drawable.bishop_white else R.drawable.bishop_black
     override fun bouger(newPos: Case): Boolean{
         var fait = false
+
         return fait
     }
 
