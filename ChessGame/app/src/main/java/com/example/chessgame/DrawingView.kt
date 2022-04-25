@@ -93,7 +93,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     return true
     }
 
-    fun checkCase(x:Float, y:Float) {
+    fun checkCase(x:Float, y:Float){
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
                 if(onfocus == null && case.piece != null) {
