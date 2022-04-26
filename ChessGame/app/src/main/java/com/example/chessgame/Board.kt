@@ -10,6 +10,8 @@ import kotlin.math.abs
 
 class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, var boardFin: Float,var view: DrawingView, val context: Context) {
     var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
+    val cimetiere1 =Cimetiere(null)
+    val cimetiere2 =Cimetiere(null)
 
     fun setRect() {
         board.set(boardDebut, boardHauteur,

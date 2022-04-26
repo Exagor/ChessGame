@@ -17,9 +17,9 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     lateinit var canvas: Canvas
     //création du board
     val board = Board( 0f, 0f, 0f, 0f,this, context)
-    // création des cimetières
-    val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, null)
-    val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, null)
+    // création des cimetières (finalement on les crée autre part)
+    //val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, null)
+    //val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, null)
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = false
@@ -57,7 +57,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         board.boardDebut = (w / 80f)
         board.boardFin = ((h*40/46f))
         board.setRect()
-
+/*
         cimetiere1.cimetiereDebut = (w / 80f)
         cimetiere1.cimetiereHauteur = (h/198f)
         cimetiere1.cimetiereFin = (h*2 / 16f)
@@ -68,7 +68,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         cimetiere2.cimetiereDebut = (w / 80f)
         cimetiere2.cimetiereHauteur= ((h*40/46f))
         cimetiere2.cimetiereFin = ((h*40/ 40.3f))
-        cimetiere2.setRect()
+        cimetiere2.setRect()*/
         board.initialisation()
         cases = board.cases
 

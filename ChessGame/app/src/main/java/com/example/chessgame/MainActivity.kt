@@ -39,7 +39,7 @@ class MainActivity: AppCompatActivity() {
                 hide_frag1 = true
             }
         }
-        // Partie pour coder le fragment cimetère
+        // Partie pour coder le fragment cimetière
         var piece1 = findViewById<ImageView>(R.id.piece1)
 
     }
