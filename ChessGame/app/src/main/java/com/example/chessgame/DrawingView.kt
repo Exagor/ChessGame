@@ -114,6 +114,11 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
 
     }
+    fun getCimetiere():MutableList<Piece>{
+        var res = board.cimetiere.Pieces
+        return res
+    }
+
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,
                                 width: Int, height: Int) {}
 
