@@ -42,6 +42,7 @@ class Pion(position: Case, color: String): Piece(position, color) {
                 }
             }
         }
+        if (fait) position.focus = false
         return fait
     }
 
