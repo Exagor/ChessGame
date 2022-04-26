@@ -20,7 +20,6 @@ class Cimetiere(var cimetiereHauteur: Float, var cimetiereDebut: Float, var cime
         canvas.drawRect(r, paint)
 
 
-
     }
     fun ajouterPiece(piece: Piece){
         if (Pieces == null)

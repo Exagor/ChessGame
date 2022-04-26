@@ -1,13 +1,10 @@
 package com.example.chessgame
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 
@@ -22,7 +19,7 @@ class ImageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Return the fragment view/layout
-        return inflater!!.inflate(R.layout.layout_image_fragment,container,false)
+        return inflater!!.inflate(R.layout.layout_fragment_cimetiere,container,false)
     }
 
     override fun onPause() {
