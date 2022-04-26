@@ -15,11 +15,12 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setContentView(R.layout.layout_fragment_cimetiere)
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
-        var hide_frag = false
+        var hide_frag1 = false
 
         tombstone.setOnClickListener {
             val imageFragment = ImageFragment()
@@ -29,15 +30,17 @@ class MainActivity: AppCompatActivity() {
             transaction.replace(R.id.fragment_container,imageFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            if (hide_frag){
+            if (hide_frag1){
                 container.setVisibility(View.VISIBLE)
-                hide_frag = false
+                hide_frag1 = false
             }
             else{
                 container.setVisibility(View.GONE)
-                hide_frag = true
+                hide_frag1 = true
             }
         }
+        // Partie pour coder le fragment cimetère
+        var piece1 = findViewById<ImageView>(R.id.piece1)
 
     }
 
