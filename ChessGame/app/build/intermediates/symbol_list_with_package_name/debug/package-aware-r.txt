@@ -2515,6 +2515,7 @@ drawable queen_black
 drawable queen_white
 drawable rook_black
 drawable rook_white
+drawable settings_icon
 drawable test_custom_background
 drawable test_level_drawable
 drawable tombstone
@@ -2735,7 +2736,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image_view
 id immediateStop
 id included
 id info
@@ -2850,6 +2850,16 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id piece0
+id piece1
+id piece2
+id piece3
+id piece4
+id piece5
+id piece6
+id piece7
+id piece8
+id piece9
 id pin
 id position
 id postLayout
@@ -2888,6 +2898,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id settings_icon
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3102,7 +3113,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout layout_image_fragment
+layout layout_fragment_cimetiere
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

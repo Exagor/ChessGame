@@ -16,6 +16,7 @@ class MainActivity: AppCompatActivity() {
         setContentView(R.layout.layout_fragment_cimetiere)
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
+    /*
         var tombstone = findViewById<ImageView>(R.id.tombstone)
         var settings = findViewById<ImageView>(R.id.settings_icon)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
@@ -69,8 +70,9 @@ class MainActivity: AppCompatActivity() {
                     9 -> piece9.setVisibility(View.VISIBLE)
                 }
             }
-        }
+        }*/
     }
+
 
     override fun onPause() {
         super.onPause()

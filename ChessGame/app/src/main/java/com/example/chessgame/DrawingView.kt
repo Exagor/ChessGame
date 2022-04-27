@@ -23,7 +23,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = false
-    var onfocus : Case? = null
+    var onfocus : Int? = null // indice de la case sélectionnée
     lateinit var thread: Thread
     lateinit var cases : MutableList<Case>
 
@@ -88,7 +88,6 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 val x = event.rawX
                 val y = event.rawY
                 checkCase(x, y)
-                println("$x $y")
             }
         }
     return true
@@ -101,13 +100,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 val row = case.row
                 println("col: $col " + "row: $row")
                 if(onfocus == null && case.piece != null) {
-                    onfocus = case
+                    onfocus = (row - 1)* 8 + col
                     case.focus = true
                 }
                  if (onfocus != null){
-                    onfocus!!.piece!!.bouger(case)
+                    cases[onfocus!!].piece!!.bouger(case)
                 }
-                else case.paint.color = Color.MAGENTA
                 break
             }
         }
