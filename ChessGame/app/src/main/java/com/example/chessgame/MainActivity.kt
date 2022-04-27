@@ -13,17 +13,18 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setContentView(R.layout.layout_fragment_cimetiere)
+        //setContentView(R.layout.layout_fragment_cimetiere)
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
         var settings = findViewById<ImageView>(R.id.settings_icon)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
-        var hide_fragcim = false
-        var hide_fragset = false
+        container.setVisibility(View.GONE)
+        var hide_fragcim = true
+        var hide_fragset = true
 
         //association des images du cimetière (sry hardcode)
-        var piece0 = findViewById<ImageView>(R.id.piece0)
+        /*var piece0 = findViewById<ImageView>(R.id.piece0)
         var piece1 = findViewById<ImageView>(R.id.piece1)
         var piece2 = findViewById<ImageView>(R.id.piece2)
         var piece3 = findViewById<ImageView>(R.id.piece3)
@@ -32,7 +33,7 @@ class MainActivity: AppCompatActivity() {
         var piece6 = findViewById<ImageView>(R.id.piece6)
         var piece7 = findViewById<ImageView>(R.id.piece7)
         var piece8 = findViewById<ImageView>(R.id.piece8)
-        var piece9 = findViewById<ImageView>(R.id.piece9)
+        var piece9 = findViewById<ImageView>(R.id.piece9)*/
 
         tombstone.setOnClickListener {
             //partie pour le fragment
@@ -53,9 +54,9 @@ class MainActivity: AppCompatActivity() {
                 hide_fragcim = true
             }
             // Partie pour update le cimetière
-            var piece_cimetiere = drawingView.getCimetiere()
+            var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
 
-            for (piece in piece_cimetiere){
+            /*for (piece in piece_cimetiere){
                 when (piece.id){
                     0 -> piece0.setVisibility(View.VISIBLE)
                     1 -> piece1.setVisibility(View.VISIBLE)
@@ -68,7 +69,7 @@ class MainActivity: AppCompatActivity() {
                     8 -> piece8.setVisibility(View.VISIBLE)
                     9 -> piece9.setVisibility(View.VISIBLE)
                 }
-            }
+            }*/
         }
     }
 

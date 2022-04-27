@@ -6,15 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7C7C7C"
     tools:context=".MainActivity">
 
     <com.example.chessgame.DrawingView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/vMain"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+        android:id="@+id/vMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/tombstone"
@@ -29,18 +31,30 @@
         app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/tombstone" />
 
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/settings_icon" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.example.chessgame.ImageFragment"
-        android:layout_width="103dp"
-        android:layout_height="151dp"
+        android:layout_width="390dp"
+        android:layout_height="586dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629"
-        tools:visibility="visible" />
+        tools:visibility="invisible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
