@@ -23,17 +23,6 @@ class MainActivity: AppCompatActivity() {
         var hide_fragcim = true
         var hide_fragset = true
 
-        //association des images du cimetière (sry hardcode)
-        /*var piece0 = findViewById<ImageView>(R.id.piece0)
-        var piece1 = findViewById<ImageView>(R.id.piece1)
-        var piece2 = findViewById<ImageView>(R.id.piece2)
-        var piece3 = findViewById<ImageView>(R.id.piece3)
-        var piece4 = findViewById<ImageView>(R.id.piece4)
-        var piece5 = findViewById<ImageView>(R.id.piece5)
-        var piece6 = findViewById<ImageView>(R.id.piece6)
-        var piece7 = findViewById<ImageView>(R.id.piece7)
-        var piece8 = findViewById<ImageView>(R.id.piece8)
-        var piece9 = findViewById<ImageView>(R.id.piece9)*/
 
         tombstone.setOnClickListener {
             //partie pour le fragment
