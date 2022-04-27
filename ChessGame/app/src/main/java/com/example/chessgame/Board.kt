@@ -32,63 +32,51 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
                     cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, view, context))
                     // création pions blancs
                     if (i == 7) {
-                        piece = Pion(cases[compteur], "white", id)
-                        id++
+                        piece = Pion(cases[compteur], "white")
                     }
                     // création  pions noirs
                     else if (i == 2) {
-                        piece = Pion(cases[compteur], "black", id)
-                        id++
+                        piece = Pion(cases[compteur], "black")
                     }
                     // création tours blanches
                     else if (i ==8 && (j == 1 || j == 8) ){
-                        piece = Tour(cases[compteur], "white", id)
-                        id++
+                        piece = Tour(cases[compteur], "white")
                     }
                     //création tours noires
                     else if (i ==1 && (j == 1 || j == 8) ){
-                        piece = Tour(cases[compteur], "black", id)
-                        id++
+                        piece = Tour(cases[compteur], "black")
                     }
                     //création cavaliers blancs
                     else if (i ==8 && (j == 2 || j == 7) ){
-                        piece = Cavalier(cases[compteur], "white", id)
-                        id++
+                        piece = Cavalier(cases[compteur], "white")
                     }
                     //création cavaliers noirs
                     else if (i ==1 && (j == 2 || j == 7) ){
-                        piece = Cavalier(cases[compteur], "black", id)
-                        id++
+                        piece = Cavalier(cases[compteur], "black")
                     }
                     // création fous blancs
                     else if (i ==8 && (j == 3 || j == 6) ){
-                        piece = Fou(cases[compteur], "white", id)
-                        id++
+                        piece = Fou(cases[compteur], "white")
                     }
                     // création fous noirs
                     else if (i ==1 && (j == 3 || j == 6) ){
-                        piece = Fou(cases[compteur], "black", id)
-                        id++
+                        piece = Fou(cases[compteur], "black")
                     }
                     // création reine blanche
                     else if (i ==8 && j == 4  ){
-                        piece = Reine(cases[compteur], "white", id)
-                        id++
+                        piece = Reine(cases[compteur], "white")
                     }
                     // création reine noire
                     else if (i ==1 && j == 4  ){
-                        piece = Reine(cases[compteur], "black", id)
-                        id++
+                        piece = Reine(cases[compteur], "black")
                     }
                     // création roi blanc
                     else if (i ==8 && j == 5  ){
-                        piece = Roi(cases[compteur], "white", id)
-                        id++
+                        piece = Roi(cases[compteur], "white")
                     }
                     // création roi noir
                     else if (i ==1 && j == 5 ){
-                        piece = Roi(cases[compteur], "black", id)
-                        id++
+                        piece = Roi(cases[compteur], "black")
                     }
                     cases[compteur].piece = piece
                     compteur += 1
