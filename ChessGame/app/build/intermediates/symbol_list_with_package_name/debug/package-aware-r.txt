@@ -2515,6 +2515,7 @@ drawable queen_black
 drawable queen_white
 drawable rook_black
 drawable rook_white
+drawable settings_icon
 drawable test_custom_background
 drawable test_level_drawable
 drawable tombstone
@@ -2618,6 +2619,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2849,8 +2851,8 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id piece0
 id piece1
-id piece10
 id piece2
 id piece3
 id piece4
@@ -2897,6 +2899,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id settings_icon
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2960,6 +2963,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3094,6 +3098,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_cim
+layout activity_echec
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item

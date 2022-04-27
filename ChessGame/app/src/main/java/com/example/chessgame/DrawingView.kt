@@ -1,9 +1,13 @@
 package com.example.chessgame
+import android.app.AlertDialog
 import android.app.Application
+import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet
@@ -11,6 +15,8 @@ import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentActivity
 import java.util.*
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
@@ -38,10 +44,10 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     fun gameOver() {
         drawing = false
         if (roi_mort=="black") {
-            showGameOverDialog(R.string.win_blanc)
+            //showGameOverDialog(R.string.win_blanc)
         }
         else if(roi_mort=="white") {
-            showGameOverDialog(R.string.win_noir)
+            //showGameOverDialog(R.string.win_noir)
         }
         gameOver = true
     }
@@ -62,9 +68,9 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             override fun onCreateDialog(bundle: Bundle?): Dialog {
                 val builder = AlertDialog.Builder(getActivity())
                 builder.setTitle(resources.getString(messageId))
-                builder.setPositiveButton(R.string.reset_game,
+                /*builder.setPositiveButton(R.string.reset_game,
                     DialogInterface.OnClickListener { _, _->newGame()}
-                )
+                )*/
                 return builder.create()
             }
         }
