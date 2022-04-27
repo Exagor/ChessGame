@@ -25,6 +25,66 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var drawing = false
     var onfocus : Int? = null // indice de la case sélectionnée
     lateinit var thread: Thread
+        var gameOver = false
+    var roi_mort= ""
+    val activity = context as FragmentActivity
+
+
+    fun king_dead(perdant:String){
+        roi_mort=perdant
+        gameOver()
+    }
+
+    fun gameOver() {
+        drawing = false
+        if (roi_mort=="black") {
+            showGameOverDialog(R.string.win_blanc)
+        }
+        else if(roi_mort=="white") {
+            showGameOverDialog(R.string.win_noir)
+        }
+        gameOver = true
+    }
+
+    fun newGame() {
+        /*board.resetBoard()
+        piece.resetPiece()
+        cimetiere.resetCimetiere()*/
+        drawing = true
+        if (gameOver) {
+            gameOver = false
+            thread = Thread(this)
+            thread.start()
+        }
+    }
+    fun showGameOverDialog(messageId: Int) {
+        class GameResult: DialogFragment() {
+            override fun onCreateDialog(bundle: Bundle?): Dialog {
+                val builder = AlertDialog.Builder(getActivity())
+                builder.setTitle(resources.getString(messageId))
+                builder.setPositiveButton(R.string.reset_game,
+                    DialogInterface.OnClickListener { _, _->newGame()}
+                )
+                return builder.create()
+            }
+        }
+
+        activity.runOnUiThread(
+            Runnable {
+                val ft = activity.supportFragmentManager.beginTransaction()
+                val prev =
+                    activity.supportFragmentManager.findFragmentByTag("dialog")
+                if (prev != null) {
+                    ft.remove(prev)
+                }
+                ft.addToBackStack(null)
+                val gameResult = GameResult()
+                gameResult.setCancelable(false)
+                gameResult.show(ft,"dialog")
+            }
+        )
+    }
+
 
 
 
