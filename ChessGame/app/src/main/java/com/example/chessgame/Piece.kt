@@ -2,7 +2,7 @@ package com.example.chessgame
 
 import kotlin.math.abs
 
-abstract class Piece(var position: Case, val color: String, val id: Int){
+abstract class Piece(var position: Case, val color: String){
     abstract var image : Int
     abstract fun bouger(newPos: Case): Boolean
     abstract fun mourir()
