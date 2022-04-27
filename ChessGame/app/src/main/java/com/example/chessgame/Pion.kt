@@ -26,18 +26,20 @@ class Pion(position: Case, color: String, id: Int): Piece(position, color, id) {
         else {
             // si se déplace en diagonale
             if (position.row - 1 == newPos.row && (position.col - 1 == newPos.col || position.col + 1 == newPos.col)){
-                // appele manger si rectangle occupée par autre couleur
+                //si mange
                 if (newPos.piece != null && newPos.piece!!.color != color) {
-                    position = newPos
                     fait = true
                     newPos.piece!!.mourir()
+                    position.piece = null
+                    newPos.piece = this
                 }
             }
             // si se déplace tout droit vers une rectangle vide
-            else if (position.col == newPos.col && newPos.piece != null) {
+            else if (position.col == newPos.col && newPos.piece == null) {
                 // peut avancer de deux cases si se trouve sur la deuxième ligne sinon avance de 1 ligne
                 if ((position.row == 7 && newPos.row == 5)||(position.row - 1 == newPos.row)) {
-                    position = newPos
+                    position.piece = null
+                    newPos.piece = this
                     fait = true
                 }
             }

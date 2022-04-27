@@ -10,11 +10,9 @@ class Cavalier(position: Case, color: String, id: Int): Piece(position, color, i
         if (abs(newPos.col - position.col)== 2 && abs(newPos.row - position.row) == 1
             ||abs(newPos.col - position.col)== 1 && abs(newPos.row - position.row) == 2 ){
             if (newPos.piece == null) {
-                position = newPos
                 fait = true
             }
             else if (newPos.piece!!.color != color) {
-                position = newPos
                 fait = true
                 newPos.piece!!.mourir()
             }

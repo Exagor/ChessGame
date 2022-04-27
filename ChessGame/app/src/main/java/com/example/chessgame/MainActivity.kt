@@ -17,7 +17,7 @@ class MainActivity: AppCompatActivity() {
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
-        var settings = findViewById<ImageView>(R.id.settings_icon)
+        //var settings = findViewById<ImageView>(R.id.settings_icon)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
         container.setVisibility(View.GONE)
         var hide_fragcim = true
@@ -54,7 +54,7 @@ class MainActivity: AppCompatActivity() {
                 hide_fragcim = true
             }
             // Partie pour update le cimetière
-            var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
+            //var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
 
             /*for (piece in piece_cimetiere){
                 when (piece.id){

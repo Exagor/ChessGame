@@ -2515,7 +2515,6 @@ drawable queen_black
 drawable queen_white
 drawable rook_black
 drawable rook_white
-drawable settings_icon
 drawable test_custom_background
 drawable test_level_drawable
 drawable tombstone
@@ -2850,8 +2849,8 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id piece0
 id piece1
+id piece10
 id piece2
 id piece3
 id piece4
@@ -2898,7 +2897,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id settings_icon
 id sharedValueSet
 id sharedValueUnset
 id shortcut

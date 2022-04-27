@@ -25,7 +25,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var drawing = false
     var onfocus : Int? = null // indice de la case sélectionnée
     lateinit var thread: Thread
-    lateinit var cases : MutableList<Case>
+
 
 
 
@@ -41,7 +41,6 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     override fun run() {
-        cases = board.cases
         while (drawing) {
            draw()
         }
@@ -70,7 +69,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         cimetiere2.cimetiereFin = ((h*40/ 40.3f))
         cimetiere2.setRect()*/
         board.initialisation()
-        cases = board.cases
+
 
     }
 
@@ -85,8 +84,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
-                val x = event.rawX
-                val y = event.rawY
+                val x = event.rawX- 30
+                val y = event.rawY -15
                 checkCase(x, y)
             }
         }
@@ -94,19 +93,33 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     fun checkCase(x:Float, y:Float){
+        val cases = board.cases
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
                 val col = case.col
                 val row = case.row
                 println("col: $col " + "row: $row")
                 if(onfocus == null && case.piece != null) {
-                    onfocus = (row - 1)* 8 + col
-                    case.focus = true
+                    println("dans premier if")
+                    onfocus = (row - 1)* 8 + col -1
+                    board.selection(onfocus!!,true )
+                    return
                 }
-                 if (onfocus != null){
-                    cases[onfocus!!].piece!!.bouger(case)
+                 if (onfocus != null ){
+                     if (board.bouger(onfocus!!, (row - 1)* 8 + col -1)){
+                        println("a bougé")
+                     }
+                     println("onfocus!=null")
+                     board.selection(onfocus!!,false )
+                     onfocus = null
                 }
+                else if (onfocus != null){
+                     println("dans else")
+                     board.selection(onfocus!!,false )
+                     onfocus = null
+                 }
                 break
+
             }
         }
 
