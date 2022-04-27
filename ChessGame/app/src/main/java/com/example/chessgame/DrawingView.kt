@@ -18,8 +18,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     //création du board
     val board = Board( 0f, 0f, 0f, 0f,this, context)
     // création des cimetières (finalement on les crée autre part)
-    //val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, null)
-    //val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, null)
+    //val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, mutableListOf())
+    //val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, mutableListOf())
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = false
