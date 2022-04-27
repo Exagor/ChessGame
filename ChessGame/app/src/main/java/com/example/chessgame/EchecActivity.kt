@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.fragment.app.FragmentContainerView
 
-class MainActivity: AppCompatActivity() {
+class EchecActivity: AppCompatActivity() {
 
     lateinit var drawingView: DrawingView
 
