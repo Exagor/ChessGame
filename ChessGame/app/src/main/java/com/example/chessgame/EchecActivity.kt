@@ -12,7 +12,7 @@ class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_echec)
         //setContentView(R.layout.layout_fragment_cimetiere)
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
