@@ -102,16 +102,21 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
         else cases[caseRef].focus = false
     }
     fun bouger(from:Int, to:Int):Boolean{
-        val moved = if (cases[from].piece!!.bouger(cases[to])) true else false
-        if (moved){
+        val moved = (cases[from].piece!!.bouger(cases[to], cases))
+        if(cases[to].piece != null && moved){
+            mourir(cases[to].piece)
+            cases[from].piece!!.position = cases[to]
+            cases[to].piece = cases[from].piece
+            cases[from].piece = null}
+        else if (moved){
             cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
             cases[from].piece = null
         }
         return moved
     }
-    fun mourir(piece: Piece){
-        cimetiere.ajouterPiece(piece)
+    fun mourir(piece: Piece?){
+        cimetiere.ajouterPiece(piece!!)
     }
 
     fun isDiagonalFree( from: Case,  to : Case): Boolean{

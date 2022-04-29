@@ -9,6 +9,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">ChessGame</string>
+    <string name="reset_game">Redémarre le jeu</string>
+    <string name="win_blanc">Les blancs ont gagné  !</string>
+    <string name="win_noir">Les noirs ont gagné  !</string>
     <style name="Theme.ChessGame" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>

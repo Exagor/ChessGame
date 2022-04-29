@@ -17,7 +17,5 @@ class Partie {
     fun selectionPiece(piece: Piece){
         pieceChoisie = piece
     }
-    fun bougePiece(case: Case){
-        if (pieceChoisie!!.bouger(case)) changeTour()
-    }
+
 }
