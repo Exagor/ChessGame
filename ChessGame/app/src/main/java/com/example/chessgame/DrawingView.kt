@@ -151,7 +151,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
                 val x = event.rawX- 30
-                val y = event.rawY -15
+                val y = event.rawY - 20
                 checkCase(x, y)
             }
         }
@@ -166,7 +166,6 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 val row = case.row
                 println("col: $col " + "row: $row")
                 if(onfocus == null && case.piece != null) {
-                    println("dans premier if")
                     onfocus = (row - 1)* 8 + col -1
                     board.selection(onfocus!!,true )
                     return

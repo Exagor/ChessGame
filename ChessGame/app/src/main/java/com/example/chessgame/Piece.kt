@@ -4,7 +4,7 @@ import kotlin.math.abs
 
 abstract class Piece(var position: Case, val color: String){
     abstract var image : Int
-    abstract fun bouger(newPos: Case): Boolean
+    abstract fun bouger(newPos: Case, cases:MutableList<Case>): Boolean
     abstract fun mourir()
     fun isDiagonalFree( from: Case,  to : Case, cases : List<Case>): Boolean{
         if (abs(from.col - to.col) != abs(from.row - to.row)) return false // pas une diagonale
