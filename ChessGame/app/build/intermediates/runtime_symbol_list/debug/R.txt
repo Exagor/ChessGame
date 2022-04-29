@@ -3323,9 +3323,9 @@ int string path_password_eye 0x7f0f007e
 int string path_password_eye_mask_strike_through 0x7f0f007f
 int string path_password_eye_mask_visible 0x7f0f0080
 int string path_password_strike_through 0x7f0f0081
-int string reset_game 0x7f0f0082
-int string search_menu_title 0x7f0f0083
-int string status_bar_notification_info_overflow 0x7f0f0084
+int string reset_game 0x7f0f0084
+int string search_menu_title 0x7f0f0082
+int string status_bar_notification_info_overflow 0x7f0f0083
 int string win_blanc 0x7f0f0085
 int string win_noir 0x7f0f0086
 int style AlertDialog_AppCompat 0x7f100000

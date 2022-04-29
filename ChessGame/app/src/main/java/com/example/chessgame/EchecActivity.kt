@@ -17,9 +17,9 @@ class EchecActivity: AppCompatActivity() {
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
-        //var settings = findViewById<ImageView>(R.id.settings_icon)
+        var settings = findViewById<ImageView>(R.id.settings_icon)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
-        container.setVisibility(View.GONE)
+        container.visibility = View.GONE
         var hide_fragcim = true
         var hide_fragset = true
 
@@ -29,21 +29,22 @@ class EchecActivity: AppCompatActivity() {
             val imageFragment = ImageFragment()
             val manager = supportFragmentManager
             val transaction = manager.beginTransaction()
+            var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
+            imageFragment.UpdateXml(piece_cimetiere)
 
             transaction.replace(R.id.fragment_container,imageFragment)
             transaction.addToBackStack(null)
             transaction.commit()
             //partie pour afficher le cimetière
             if (hide_fragcim){
-                container.setVisibility(View.VISIBLE)
+                container.visibility = View.VISIBLE
                 hide_fragcim = false
             }
             else{
-                container.setVisibility(View.GONE)
+                container.visibility = View.GONE
                 hide_fragcim = true
             }
             // Partie pour update le cimetière
-            var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
 
             /*for (piece in piece_cimetiere){
                 when (piece.id){
