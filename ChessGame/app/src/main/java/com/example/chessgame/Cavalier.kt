@@ -9,20 +9,14 @@ class Cavalier(position: Case, color: String): Piece(position, color) {
         var fait = false
         if (abs(newPos.col - position.col)== 2 && abs(newPos.row - position.row) == 1
             ||abs(newPos.col - position.col)== 1 && abs(newPos.row - position.row) == 2 ){
-            if (newPos.piece == null) {
-                fait = true
-            }
-            else if (newPos.piece!!.color != color) {
-                fait = true
-                newPos.piece!!.mourir()
+            if (newPos.piece == null ||newPos.piece!!.color != color) {
+                return  true
             }
         }
-        return fait
+        return false
     }
 
-    override fun mourir() {
-        TODO("Not yet implemented")
-    }
+
 
 
 }

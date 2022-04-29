@@ -43,7 +43,7 @@ class EchecActivity: AppCompatActivity() {
                 hide_fragcim = true
             }
             // Partie pour update le cimetière
-            //var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
+            var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
 
             /*for (piece in piece_cimetiere){
                 when (piece.id){

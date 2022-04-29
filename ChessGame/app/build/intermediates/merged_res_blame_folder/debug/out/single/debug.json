@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_bishop_black.png.flat",
-        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/bishop_black.png"
-    },
-    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_bishop_black.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/bishop_black.png"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_king_black.png.flat",
@@ -28,12 +28,12 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_layout_fragment_cimetiere.xml.flat",
-        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/layout_fragment_cimetiere.xml"
-    },
-    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_queen_white.png.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/queen_white.png"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_layout_fragment_cimetiere.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/layout_fragment_cimetiere.xml"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
