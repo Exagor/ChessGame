@@ -11,6 +11,7 @@ import kotlin.math.abs
 class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, var boardFin: Float,var view: DrawingView, val context: Context) {
     var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
     val cimetiere =Cimetiere(mutableListOf())
+    var partie = Partie()
 
     fun setRect() {
         board.set(boardDebut, boardHauteur,
@@ -21,7 +22,6 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
     fun initialisation() { // crée les cases du board et les pièces
         if(cases.size < 64){
             var compteur = 0
-            var id = 0
             var dx = (width) / 8
             var dy = (boardFin - boardHauteur) / 8
             var x_i = boardDebut
@@ -98,8 +98,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
     }
 
     fun selection(caseRef:Int , colorier: Boolean){
-        if(colorier) cases[caseRef].focus = true
-        else cases[caseRef].focus = false
+        cases[caseRef].focus = colorier
     }
     fun bouger(from:Int, to:Int):Boolean{
         val moved = (cases[from].piece!!.bouger(cases[to], cases))

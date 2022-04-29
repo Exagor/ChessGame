@@ -1,31 +1,21 @@
 package com.example.chessgame
 import android.app.AlertDialog
-import android.app.Application
 import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
-import java.util.*
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
     //création du board
     val board = Board( 0f, 0f, 0f, 0f,this, context)
-    // création des cimetières (finalement on les crée autre part)
-    //val cimetiere1 =Cimetiere(0f, 0f, 0f, 0f, this, mutableListOf())
-    //val cimetiere2 =Cimetiere(0f, 0f, 0f, 0f, this, mutableListOf())
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = false
@@ -66,7 +56,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     fun showGameOverDialog(messageId: Int) {
         class GameResult: DialogFragment() {
             override fun onCreateDialog(bundle: Bundle?): Dialog {
-                val builder = AlertDialog.Builder(getActivity())
+                val builder = AlertDialog.Builder(activity)
                 builder.setTitle(resources.getString(messageId))
                 builder.setPositiveButton(R.string.reset_game,
                     DialogInterface.OnClickListener { _, _->newGame()}
@@ -85,7 +75,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 }
                 ft.addToBackStack(null)
                 val gameResult = GameResult()
-                gameResult.setCancelable(false)
+                gameResult.isCancelable = false
                 gameResult.show(ft,"dialog")
             }
         )
@@ -162,9 +152,10 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         val cases = board.cases
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
+                // Mettre une condition pour si la case contient une pièce de couleur différente
                 val col = case.col
                 val row = case.row
-                println("col: $col " + "row: $row")
+                println("col: $col row: $row")
                 if(onfocus == null && case.piece != null) {
                     onfocus = (row - 1)* 8 + col -1
                     board.selection(onfocus!!,true )
@@ -190,9 +181,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
 
     }
-    fun getCimetiere():MutableList<Piece>{
-        var res = board.cimetiere.Pieces
-        return res
+    fun getCimetiere(): MutableList<Piece> {
+        return board.cimetiere.Pieces
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,
