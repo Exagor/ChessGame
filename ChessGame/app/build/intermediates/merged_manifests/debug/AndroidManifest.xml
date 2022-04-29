@@ -19,6 +19,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.ChessGame" >
         <activity
+            android:name="com.example.chessgame.EchecActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chessgame.CimActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.chessgame.MainActivity"
             android:exported="true" >
             <intent-filter>
