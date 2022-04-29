@@ -47,4 +47,7 @@ layout layout_fragment_cimetiere
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string reset_game
+string win_blanc
+string win_noir
 style Theme.ChessGame

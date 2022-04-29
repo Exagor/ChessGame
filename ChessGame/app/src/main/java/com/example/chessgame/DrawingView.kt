@@ -68,9 +68,9 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             override fun onCreateDialog(bundle: Bundle?): Dialog {
                 val builder = AlertDialog.Builder(getActivity())
                 builder.setTitle(resources.getString(messageId))
-                /*builder.setPositiveButton(R.string.reset_game,
+                builder.setPositiveButton(R.string.reset_game,
                     DialogInterface.OnClickListener { _, _->newGame()}
-                )*/
+                )
                 return builder.create()
             }
         }

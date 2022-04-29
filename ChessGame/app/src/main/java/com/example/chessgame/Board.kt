@@ -98,11 +98,10 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
     }
 
     fun selection(caseRef:Int , colorier: Boolean){
-        if(colorier) cases[caseRef].focus = true
-        else cases[caseRef].focus = false
+        cases[caseRef].focus = colorier
     }
     fun bouger(from:Int, to:Int):Boolean{
-        val moved = if (cases[from].piece!!.bouger(cases[to])) true else false
+        val moved = cases[from].piece!!.bouger(cases[to])
         if (moved){
             cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
