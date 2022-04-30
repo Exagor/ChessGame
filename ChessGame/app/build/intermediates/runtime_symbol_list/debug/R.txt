@@ -2437,6 +2437,12 @@ int drawable abc_textfield_search_material 0x7f070054
 int drawable abc_vector_test 0x7f070055
 int drawable avd_hide_password 0x7f070056
 int drawable avd_show_password 0x7f070057
+int drawable b_bishop_png_512px 0x7f0700ac
+int drawable b_king_png_512px 0x7f0700ad
+int drawable b_knight_png_512px 0x7f0700ae
+int drawable b_pawn_png_512px 0x7f0700af
+int drawable b_queen_png_512px 0x7f0700b0
+int drawable b_rook_png_512px 0x7f0700b1
 int drawable bishop_black 0x7f070058
 int drawable bishop_white 0x7f070059
 int drawable btn_checkbox_checked_mtrl 0x7f07005a
@@ -2510,6 +2516,7 @@ int drawable notification_tile_bg 0x7f07009d
 int drawable notify_panel_notification_icon_bg 0x7f07009e
 int drawable pawn_black 0x7f07009f
 int drawable pawn_white 0x7f0700a0
+int drawable pionmenu 0x7f0700ab
 int drawable queen_black 0x7f0700a1
 int drawable queen_white 0x7f0700a2
 int drawable rook_black 0x7f0700a3
@@ -2520,6 +2527,12 @@ int drawable test_level_drawable 0x7f0700a7
 int drawable tombstone 0x7f0700a8
 int drawable tooltip_frame_dark 0x7f0700a9
 int drawable tooltip_frame_light 0x7f0700aa
+int drawable w_bishop_png_512px 0x7f0700b2
+int drawable w_king_png_512px 0x7f0700b3
+int drawable w_knight_png_512px 0x7f0700b4
+int drawable w_pawn_png_512px 0x7f0700b5
+int drawable w_queen_png_512px 0x7f0700b6
+int drawable w_rook_png_512px 0x7f0700b7
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -2736,6 +2749,7 @@ int id ifRoom 0x7f0800d4
 int id ignore 0x7f0800d5
 int id ignoreRequest 0x7f0800d6
 int id image 0x7f0800d7
+int id imageView 0x7f0801ec
 int id immediateStop 0x7f0800d8
 int id included 0x7f0800d9
 int id info 0x7f0800da
@@ -2962,7 +2976,6 @@ int id textSpacerNoButtons 0x7f0801b6
 int id textSpacerNoTitle 0x7f0801b7
 int id textStart 0x7f0801b8
 int id textTop 0x7f0801b9
-int id textView 0x7f0801ba
 int id text_input_end_icon 0x7f0801bb
 int id text_input_error_icon 0x7f0801bc
 int id text_input_start_icon 0x7f0801bd

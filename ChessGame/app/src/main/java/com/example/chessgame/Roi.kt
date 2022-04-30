@@ -4,7 +4,7 @@ import kotlin.math.abs
 
 class Roi(position: Case, color: String): Piece(position, color) {
     var valeur = 100
-    override var image = if (color == "white") R.drawable.king_white else R.drawable.king_black
+    override var image = if (color == "white") R.drawable.w_king_png_512px else R.drawable.b_king_png_512px
     override fun bouger(newPos: Case,cases : MutableList<Case>): Boolean{
         // peut se déplacer
         if(newPos.piece == null || newPos.piece!!.color != color){

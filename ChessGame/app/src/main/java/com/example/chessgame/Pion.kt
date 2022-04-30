@@ -1,7 +1,7 @@
 package com.example.chessgame
 
 class Pion(position: Case, color: String): Piece(position, color) {
-    override var image = if (color == "white") R.drawable.pawn_white else R.drawable.pawn_black
+    override var image = if (color == "white") R.drawable.w_pawn_png_512px else R.drawable.b_pawn_png_512px
     override fun bouger(newPos:Case, cases: MutableList<Case>): Boolean {
         // se déplacer tout droit
         if (position.col == newPos.col && newPos.piece == null ) {
@@ -18,7 +18,7 @@ class Pion(position: Case, color: String): Piece(position, color) {
         }
         //se déplace en diagonale
         else if (newPos.piece!= null &&(position.col == newPos.col +1 || position.col == newPos.col -1) && newPos.piece!!.color != color){
-          return (color == "black" && newPos.row > position.row )|| (color == "white" && newPos.row < position.row )}
+          return (color == "black" && newPos.row == position.row +1)|| (color == "white" && newPos.row +1 == position.row )}
        return false
     }
 

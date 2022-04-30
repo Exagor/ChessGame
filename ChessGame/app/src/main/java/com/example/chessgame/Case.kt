@@ -16,21 +16,22 @@ class Case(var row:Int, var col:Int, var x1:Float,var y1: Float,var x2:Float,var
 
     fun draw(canvas: Canvas) {
         if (focus){
-            paint.color= Color.MAGENTA
+            paint.color= Color.argb(255,192,108,136)
         }
 
         else if ((col+row)%2==0){
-            paint.color = Color.LTGRAY
+            paint.color = Color.argb(255,158,216,219)
         }
         else {
-            paint.color = Color.BLACK
+            paint.color = Color.argb(255,4,123,159)
         }
 
         canvas.drawRect(rectangle, paint)
         if (piece != null) {
             val image = piece!!.image
             val bmp = BitmapFactory.decodeResource(context.resources, image)
-            canvas.drawBitmap(bmp!!, null, rectangle, null)
+            val rect = RectF(x1+8, y1+10, x2-8, y2-10)
+            canvas.drawBitmap(bmp!!, null, rect, null)
         }
 
     }

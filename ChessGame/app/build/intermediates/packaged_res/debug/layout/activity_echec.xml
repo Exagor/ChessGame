@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#292929"
+    android:background="#F6C6D6"
+    android:backgroundTint="#F4CCCC"
     tools:context=".EchecActivity">
 
     <com.example.chessgame.DrawingView
@@ -29,7 +30,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/tombstone" />
+        app:srcCompat="@drawable/tombstone"
+         />
 
     <ImageView
         android:id="@+id/settings_icon"

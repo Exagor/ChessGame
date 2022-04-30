@@ -3,7 +3,7 @@ package com.example.chessgame
 import kotlin.math.abs
 
 class Cavalier(position: Case, color: String): Piece(position, color) {
-    override var image = if (color == "white") R.drawable.knight_white else R.drawable.knight_black
+    override var image = if (color == "white") R.drawable.w_knight_png_512px else R.drawable.b_knight_png_512px
 
     override fun bouger(newPos: Case, cases: MutableList<Case>): Boolean {
         var fait = false

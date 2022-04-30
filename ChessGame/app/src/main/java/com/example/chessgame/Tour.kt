@@ -3,7 +3,7 @@ package com.example.chessgame
 import kotlin.math.abs
 
 class Tour(position: Case, color: String): Piece(position, color) {
-    override var image = if (color == "white") R.drawable.rook_white else R.drawable.rook_black
+    override var image = if (color == "white") R.drawable.w_rook_png_512px else R.drawable.b_rook_png_512px
     override fun bouger(newPos: Case, cases: MutableList<Case>): Boolean {
         if (abs(newPos.row - position.row) == 0 && isHorizontalFree(position, newPos, cases)) {
             println("horizontal")

@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Canvas
+import android.graphics.Color
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -13,12 +14,9 @@ import android.view.SurfaceView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
-import android.view.View
-import android.widget.Toast
-import android.view.animation.AnimationUtils
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+
+import android.graphics.Paint
+
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
@@ -32,8 +30,10 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     var gameOver = false
     var roi_mort=""
     val activity = context as FragmentActivity
-
-
+    val backgroundPaint = Paint()
+    init {
+        backgroundPaint.color =Color.argb(255, 1,22,56)
+    }
     fun king_dead(perdant:String){
         roi_mort=perdant
         gameOver()
@@ -123,6 +123,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
      fun draw() {
         if (holder.surface.isValid) {
             canvas = holder.lockCanvas()
+            canvas.drawRect(0F,0F,canvas.width*1F,canvas.height*1F,backgroundPaint)
             board.draw(canvas)
             holder.unlockCanvasAndPost(canvas)
         }

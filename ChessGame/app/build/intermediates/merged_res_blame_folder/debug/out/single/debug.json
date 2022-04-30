@@ -12,6 +12,10 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/king_black.png"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_king_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_king_png_512px.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
     },
@@ -40,8 +44,16 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_pawn_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_pawn_png_512px.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable-v24_tombstone.png.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable-v24/tombstone.png"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_bishop_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_bishop_png_512px.png"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
@@ -56,12 +68,20 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/rook_white.png"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_bishop_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_bishop_png_512px.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_rook_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_rook_png_512px.png"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_rook_black.png.flat",
@@ -80,8 +100,20 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_pionmenu.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/pionmenu.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_bishop_white.png.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/bishop_white.png"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_rook_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_rook_png_512px.png"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_queen_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_queen_png_512px.png"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_queen_black.png.flat",
@@ -96,12 +128,24 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_knight_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_knight_png_512px.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_pawn_white.png.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/pawn_white.png"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_king_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_king_png_512px.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_knight_white.png.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/knight_white.png"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_queen_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_queen_png_512px.png"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
@@ -112,8 +156,16 @@
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/activity_cim.xml"
     },
     {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_knight_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_knight_png_512px.png"
+    },
+    {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_pawn_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_pawn_png_512px.png"
     },
     {
         "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_activity_echec.xml.flat",
