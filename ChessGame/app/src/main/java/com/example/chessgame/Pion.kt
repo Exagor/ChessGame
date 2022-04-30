@@ -17,7 +17,7 @@ class Pion(position: Case, color: String): Piece(position, color) {
             else return (color == "black" && newPos.row  == position.row +1)|| (color == "white" && newPos.row ==  position.row -1 )
         }
         //se déplace en diagonale
-        else if ((position.col == newPos.col +1 || position.col ==newPos.col -1) && newPos.piece!!.color != color){
+        else if (newPos.piece!= null &&(position.col == newPos.col +1 || position.col == newPos.col -1) && newPos.piece!!.color != color){
           return (color == "black" && newPos.row > position.row )|| (color == "white" && newPos.row < position.row )}
        return false
     }
