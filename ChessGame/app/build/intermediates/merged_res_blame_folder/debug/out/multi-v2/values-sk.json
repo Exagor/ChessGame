@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
+            "outputFile": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGame\\ChessGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\alexa\\.gradle\\caches\\transforms-3\\f49935e10f9d3b78438d1014426100a3\\transformed\\material-1.5.0\\res\\values-sk\\values-sk.xml",
