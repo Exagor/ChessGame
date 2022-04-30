@@ -3,7 +3,6 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
-import android.content.Intent
 import android.graphics.Canvas
 import android.graphics.Color
 import android.os.Bundle
@@ -11,7 +10,6 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 
@@ -63,7 +61,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     fun showGameOverDialog(messageId: Int) {
         class GameResult: DialogFragment() {
             override fun onCreateDialog(bundle: Bundle?): Dialog {
-                val builder = AlertDialog.Builder(getActivity())
+                val builder = AlertDialog.Builder(activity)
                 builder.setTitle(resources.getString(messageId))
                 builder.setPositiveButton(R.string.reset_game,
                     DialogInterface.OnClickListener { _, _->newGame()}
@@ -82,7 +80,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                 }
                 ft.addToBackStack(null)
                 val gameResult = GameResult()
-                gameResult.setCancelable(false)
+                gameResult.isCancelable = false
                 gameResult.show(ft,"dialog")
             }
         )
@@ -144,38 +142,38 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         val cases = board.cases
         for (case in cases) {
             if (case.rectangle.contains(x,y)){
-                val col = case.col
-                val row = case.row
-                println("col: $col " + "row: $row")
-                if(onfocus == null && case.piece != null) {
-                    println("dans premier if")
-                    onfocus = (row - 1)* 8 + col -1
-                    board.selection(onfocus!!,true )
-                    return
-                }
-                 if (onfocus != null ){
-                     if (board.bouger(onfocus!!, (row - 1)* 8 + col -1)){
-                        println("a bougé")
-                     }
-                     println("onfocus!=null")
-                     board.selection(onfocus!!,false )
-                     onfocus = null
-                }
-                else if (onfocus != null){
-                     println("dans else")
-                     board.selection(onfocus!!,false )
-                     onfocus = null
-                 }
-                break
-
+                    val col = case.col
+                    val row = case.row
+                    println("col: $col row: $row")
+                    if ((board.checkTour() && case.piece?.color == "white") or (!board.checkTour() && case.piece?.color == "black")){
+                        if (onfocus == null && case.piece != null) {
+                            println("dans premier if")
+                            onfocus = (row - 1) * 8 + col - 1
+                            board.selection(onfocus!!, true)
+                            return
+                    }
+                    }
+                    if (onfocus != null) {
+                        if (board.bouger(onfocus!!, (row - 1) * 8 + col - 1)) {
+                            println("a bougé")
+                            board.ChangeTour()
+                        }
+                        println("onfocus!=null")
+                        board.selection(onfocus!!, false)
+                        onfocus = null
+                    } else if (onfocus != null) {
+                        println("dans else")
+                        board.selection(onfocus!!, false)
+                        onfocus = null
+                    }
+                    break
             }
         }
 
 
     }
-    fun getCimetiere():MutableList<Piece>{
-        var res = board.cimetiere.Pieces
-        return res
+    fun getCimetiere(): MutableList<Piece> {
+        return board.cimetiere.Pieces
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,

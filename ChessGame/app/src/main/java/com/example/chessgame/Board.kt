@@ -123,6 +123,12 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
     fun mourir(piece: Piece?){
         cimetiere.ajouterPiece(piece!!)
     }
+    fun checkTour():Boolean{
+        return partie.tour
+    }
+    fun ChangeTour(){
+        partie.changeTour()
+    }
 
 
 

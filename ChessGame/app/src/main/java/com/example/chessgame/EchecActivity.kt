@@ -13,7 +13,6 @@ class EchecActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_echec)
-        //setContentView(R.layout.layout_fragment_cimetiere)
         drawingView = findViewById<DrawingView>(R.id.vMain)
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
@@ -44,6 +43,7 @@ class EchecActivity: AppCompatActivity() {
                 container.visibility = View.GONE
                 hide_fragcim = true
             }
+
             // Partie pour update le cimetière
 
             /*for (piece in piece_cimetiere){
@@ -60,6 +60,9 @@ class EchecActivity: AppCompatActivity() {
                     9 -> piece9.setVisibility(View.VISIBLE)
                 }
             }*/
+        }
+        settings.setOnClickListener {
+            //fragment settings
         }
     }
 
