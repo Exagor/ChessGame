@@ -2749,7 +2749,6 @@ int id ifRoom 0x7f0800d4
 int id ignore 0x7f0800d5
 int id ignoreRequest 0x7f0800d6
 int id image 0x7f0800d7
-int id imageView 0x7f0801ec
 int id immediateStop 0x7f0800d8
 int id included 0x7f0800d9
 int id info 0x7f0800da
@@ -2976,6 +2975,7 @@ int id textSpacerNoButtons 0x7f0801b6
 int id textSpacerNoTitle 0x7f0801b7
 int id textStart 0x7f0801b8
 int id textTop 0x7f0801b9
+int id textView 0x7f0801ba
 int id text_input_end_icon 0x7f0801bb
 int id text_input_error_icon 0x7f0801bc
 int id text_input_start_icon 0x7f0801bd

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#011638"
     tools:context=".MainActivity">
 
 
@@ -11,28 +12,30 @@
         android:id="@+id/button"
         android:layout_width="173dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="140dp"
-        android:backgroundTint="#674514"
+        android:backgroundTint="#F4C095"
         android:text="START"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#120101"
+        android:textColor="#011638"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:scaleType="fitXY"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/pionmenu"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="122dp"
-        tools:ignore="MissingConstraints" />
+        android:text="Chess Game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#F4C095"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

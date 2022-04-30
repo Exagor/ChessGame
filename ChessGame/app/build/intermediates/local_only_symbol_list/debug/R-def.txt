@@ -39,7 +39,6 @@ drawable w_queen_png_512px
 drawable w_rook_png_512px
 id button
 id fragment_container
-id imageView
 id piece0
 id piece1
 id piece2
@@ -51,6 +50,7 @@ id piece7
 id piece8
 id piece9
 id settings_icon
+id textView
 id tombstone
 id vMain
 layout activity_cim
