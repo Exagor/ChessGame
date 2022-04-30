@@ -103,10 +103,15 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
     fun bouger(from:Int, to:Int):Boolean{
         val moved = (cases[from].piece!!.bouger(cases[to], cases))
         if(cases[to].piece != null && moved){
+            if( cases[to].piece is Roi){
+                view.king_dead(cases[to].piece!!.color)
+            }
+            else {
             mourir(cases[to].piece)
             cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
             cases[from].piece = null}
+        }
         else if (moved){
             cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
@@ -114,6 +119,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
         }
         return moved
     }
+    
     fun mourir(piece: Piece?){
         cimetiere.ajouterPiece(piece!!)
     }
