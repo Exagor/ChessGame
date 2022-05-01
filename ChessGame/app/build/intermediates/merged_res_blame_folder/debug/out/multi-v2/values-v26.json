@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGame\\ChessGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\alexa\\.gradle\\caches\\transforms-3\\ba512f38f0bacee7d86638331ba04ff4\\transformed\\appcompat-1.4.1\\res\\values-v26\\values-v26.xml",
+                    "source": "/Users/alice/.gradle/caches/transforms-3/ba512f38f0bacee7d86638331ba04ff4/transformed/appcompat-1.4.1/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

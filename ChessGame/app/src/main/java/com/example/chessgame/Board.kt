@@ -106,6 +106,14 @@ class Board(var boardHauteur: Float, var boardDebut: Float,  var width: Float, v
             if( cases[to].piece is Roi){
                 view.king_dead(cases[to].piece!!.color)
             }
+            if(cases[to].piece!!.color == cases[from].piece!!.color){//si roque
+                cases[from].piece!!.position = cases[to-1]
+                cases[to-1].piece = cases[from].piece
+                cases[from+1].piece = cases[to].piece
+                cases[from].piece = null
+                cases[to].piece = null
+            }
+
             else {
             mourir(cases[to].piece)
             cases[from].piece!!.position = cases[to]

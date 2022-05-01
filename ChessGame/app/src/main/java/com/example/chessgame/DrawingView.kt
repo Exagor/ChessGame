@@ -147,7 +147,6 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                     println("col: $col row: $row")
                     if ((board.checkTour() && case.piece?.color == "white") or (!board.checkTour() && case.piece?.color == "black")){
                         if (onfocus == null && case.piece != null) {
-                            println("dans premier if")
                             onfocus = (row - 1) * 8 + col - 1
                             board.selection(onfocus!!, true)
                             return
@@ -155,14 +154,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                     }
                     if (onfocus != null) {
                         if (board.bouger(onfocus!!, (row - 1) * 8 + col - 1)) {
-                            println("a bougé")
                             board.ChangeTour()
                         }
                         println("onfocus!=null")
                         board.selection(onfocus!!, false)
                         onfocus = null
                     } else if (onfocus != null) {
-                        println("dans else")
                         board.selection(onfocus!!, false)
                         onfocus = null
                     }
