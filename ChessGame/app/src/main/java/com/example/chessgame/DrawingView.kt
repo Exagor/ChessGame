@@ -14,6 +14,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 
 import android.graphics.Paint
+import kotlin.math.min
 
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
@@ -50,7 +51,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
     private fun newGame() {
         board.initialisation()
-        drawing = true
+        draw()
         if (gameOver) {
             gameOver = false
             thread = Thread(this)
@@ -100,7 +101,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
     override fun run() {
         while (drawing) {
-           draw()
+
         }
     }
 
@@ -108,13 +109,13 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         super.onSizeChanged(w, h, oldw, oldh)
         screenWidth = w.toFloat()
         screenHeight = h.toFloat()
-
-        board.width = (w*13 / 13.3f)
-        board.boardHauteur= (h*2 / 16f)
-        board.boardDebut = (w / 80f)
-        board.boardFin = ((h*40/46f))
+        val s = min(screenHeight,screenWidth)*8/9
+        board.right = (w+s)/2
+        board.left = (w-s)/2
+        board.top= (h- s)/2
+        board.bottom = ((h+s)/2)
         board.setRect()
-        board.initialisation()
+        draw()
         newGame()
     }
 
@@ -131,7 +132,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
                 val x = event.rawX- 30
-                val y = event.rawY -15
+                val y = event.rawY -30
                 checkCase(x, y)
             }
         }
@@ -147,26 +148,23 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                     println("col: $col row: $row")
                     if ((board.checkTour() && case.piece?.color == "white") or (!board.checkTour() && case.piece?.color == "black")){
                         if (onfocus == null && case.piece != null) {
-                            println("dans premier if")
                             onfocus = (row - 1) * 8 + col - 1
                             board.selection(onfocus!!, true)
-                            return
                     }
                     }
-                    if (onfocus != null) {
+                    else if (onfocus != null) {
                         if (board.bouger(onfocus!!, (row - 1) * 8 + col - 1)) {
-                            println("a bougé")
                             board.ChangeTour()
                         }
                         println("onfocus!=null")
                         board.selection(onfocus!!, false)
                         onfocus = null
                     } else if (onfocus != null) {
-                        println("dans else")
                         board.selection(onfocus!!, false)
                         onfocus = null
                     }
-                    break
+                    draw()
+                    return
             }
         }
 

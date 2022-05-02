@@ -21,21 +21,22 @@ class EchecActivity: AppCompatActivity() {
         container.visibility = View.GONE
         var hide_fragcim = true
         var hide_fragset = true
+        val PlayerNameWhite = intent.getStringExtra("Nom du joueur (blancs):")
+        val PlayerNameBlack = intent.getStringExtra("Nom du joueur (noirs):")
+        val JoueurBlanc = Joueur(PlayerNameWhite, "white")
+        val JoueurNoir = Joueur(PlayerNameBlack, "black")
 
-        val imageFragment = ImageFragment()
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-
-        transaction.replace(R.id.fragment_container,imageFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
         tombstone.setOnClickListener {
             //partie pour le fragment
+            val imageFragment = ImageFragment()
+            val manager = supportFragmentManager
+            val transaction = manager.beginTransaction()
             var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
-            var truc:View? = imageFragment.view
-            if (truc!=null){
-                imageFragment.UpdateXml(piece_cimetiere, truc)
-            }
+            imageFragment.UpdateXml(piece_cimetiere)
+
+            transaction.replace(R.id.fragment_container,imageFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
             //partie pour afficher le cimetière
             if (hide_fragcim){
                 container.visibility = View.VISIBLE
