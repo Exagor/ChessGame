@@ -8,7 +8,7 @@ import android.graphics.RectF
 
 
 class Board(var top: Float, var left: Float, var right: Float, var bottom: Float, var view: DrawingView, val context: Context
-) : BecomeQueen {
+) {
     var board = RectF(left, top, right,bottom)
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
@@ -155,7 +155,7 @@ class Board(var top: Float, var left: Float, var right: Float, var bottom: Float
         partie.changeTour()
     }
 
-    override fun QueenBecoming(queencolor: String,to : Int) {
+    fun QueenBecoming(queencolor: String,to : Int) {
         cases[to].piece = Reine(cases[to], queencolor)
     }
 
