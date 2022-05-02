@@ -14,13 +14,12 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 
 import android.graphics.Paint
-import kotlin.math.min
 
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     lateinit var canvas: Canvas
     //création du board
-    val board = Board( 0f, 0f, 0f, 0f,this, context)
+    var board = Board( 0f, 0f, 0f, 0f,this, context)
     var screenWidth = 0f
     var screenHeight = 0f
     var drawing = false
@@ -33,6 +32,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     init {
         backgroundPaint.color =Color.argb(255, 1,22,56)
     }
+
     fun king_dead(perdant:String){
         roi_mort=perdant
         gameOver()
@@ -51,7 +51,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
     private fun newGame() {
         board = Board( 0f, 0f, 0f, 0f,this, context)
-        onSizeChanged(1080, 1731, 0, 0)
+        onSizeChanged(1080, 1731, 0, 0,)
         drawing = true
         if (gameOver) {
             gameOver = false
@@ -59,6 +59,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             thread.start()
         }
     }
+
+
 
     fun showGameOverDialog(messageId: Int) {
         class GameResult: DialogFragment() {
@@ -102,23 +104,25 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
     override fun run() {
         while (drawing) {
-
+           draw()
         }
     }
 
     override fun onSizeChanged(w:Int, h:Int, oldw:Int, oldh:Int) {
+
         super.onSizeChanged(w, h, oldw, oldh)
         screenWidth = w.toFloat()
         screenHeight = h.toFloat()
-        val s = min(screenHeight,screenWidth)*8/9
-        board.right = (w+s)/2
-        board.left = (w-s)/2
-        board.top= (h- s)/2
-        board.bottom = ((h+s)/2)
+
+        board.width = (w*13 / 13.3f)
+        board.boardHauteur= (h*2 / 16f)
+        board.boardDebut = (w / 80f)
+        board.boardFin = ((h*40/46f))
         board.setRect()
-        draw()
-        newGame()
+        board.initialisation()
+
     }
+
 
      fun draw() {
         if (holder.surface.isValid) {
@@ -133,12 +137,13 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
                 val x = event.rawX- 30
-                val y = event.rawY -30
+                val y = event.rawY -15
                 checkCase(x, y)
             }
         }
     return true
     }
+
 
     fun checkCase(x:Float, y:Float){
         val cases = board.cases
@@ -149,23 +154,26 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                     println("col: $col row: $row")
                     if ((board.checkTour() && case.piece?.color == "white") or (!board.checkTour() && case.piece?.color == "black")){
                         if (onfocus == null && case.piece != null) {
+                            println("dans premier if")
                             onfocus = (row - 1) * 8 + col - 1
                             board.selection(onfocus!!, true)
+                            return
                     }
                     }
-                    else if (onfocus != null) {
+                    if (onfocus != null) {
                         if (board.bouger(onfocus!!, (row - 1) * 8 + col - 1)) {
+                            println("a bougé")
                             board.ChangeTour()
                         }
                         println("onfocus!=null")
                         board.selection(onfocus!!, false)
                         onfocus = null
                     } else if (onfocus != null) {
+                        println("dans else")
                         board.selection(onfocus!!, false)
                         onfocus = null
                     }
-                    draw()
-                    return
+                    break
             }
         }
 
