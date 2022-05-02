@@ -5,27 +5,28 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
+import kotlin.math.abs
 
 
-class Board(var top: Float, var left: Float, var right: Float, var bottom: Float, var view: DrawingView, val context: Context
-) {
-    var board = RectF(left, top, right,bottom)
+class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, var boardFin: Float, var view: DrawingView, val context: Context
+)  {
+    var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
 
     fun setRect() {
-        board.set(left, top,
-             right, bottom)
+        board.set(boardDebut, boardHauteur,
+            boardDebut + width, boardFin)
     }
     var cases = mutableListOf<Case>()
     var paint = Paint()
     fun initialisation() { // crée les cases du board et les pièces
         if(cases.size < 64){
             var compteur = 0
-            var dx = (right-left) / 8
-            var dy = (bottom - top) / 8
-            var x_i = left
-            var y_i = top
+            var dx = (width) / 8
+            var dy = (boardFin - boardHauteur) / 8
+            var x_i = boardDebut
+            var y_i = boardHauteur
             for (i in 1..8) { //lignes
                 for (j in 1..8) { //colonnes
                     var piece: Piece? = null
@@ -84,7 +85,7 @@ class Board(var top: Float, var left: Float, var right: Float, var bottom: Float
                     x_i += dx
                 }
                 y_i += dy
-                x_i = left
+                x_i = boardDebut
             }
         }
     }
@@ -93,6 +94,7 @@ class Board(var top: Float, var left: Float, var right: Float, var bottom: Float
         paint.color = Color.WHITE
         canvas.drawRect(board, paint)
         for (case in cases){
+            case.setRect()
             case.draw(canvas)
         }
     }
@@ -100,38 +102,19 @@ class Board(var top: Float, var left: Float, var right: Float, var bottom: Float
     fun selection(caseRef:Int , colorier: Boolean){
         cases[caseRef].focus = colorier
     }
+
     fun bouger(from:Int, to:Int):Boolean{
         val moved = (cases[from].piece!!.bouger(cases[to], cases))
         if(cases[to].piece != null && moved){
             if( cases[to].piece is Roi){
                 view.king_dead(cases[to].piece!!.color)
             }
-            if(cases[to].piece!!.color == cases[from].piece!!.color){//si roque
-                cases[from].piece!!.position = cases[to-1]
-                cases[to-1].piece = cases[from].piece
-                cases[from+1].piece = cases[to].piece
-                cases[from].piece = null
-                cases[to].piece = null
-            } else {
+            else {
             mourir(cases[to].piece)
             cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
             cases[from].piece = null
-            if (cases[to].piece is Pion /*&&  reine in cimetiere.Pieces*/){
-                if ( to<8  && cases[to].piece!!.color=="white"){
-                    QueenBecoming("white", to)}
-
-                else if (to>55 && cases[to].piece!!.color=="black"  ){
-                    QueenBecoming("black", to)
-                }
-            }}
-        }
-
-        else if(moved){
-            cases[from].piece!!.position = cases[to]
-            cases[to].piece = cases[from].piece
-            cases[from].piece = null
-            if (cases[to].piece is Pion /*&&  reine in cimetiere.Pieces*/){
+            if (cases[to].piece is Pion ){
                 if ( to<8  && cases[to].piece!!.color=="white"){
                     QueenBecoming("white", to)}
 
@@ -139,7 +122,21 @@ class Board(var top: Float, var left: Float, var right: Float, var bottom: Float
                     QueenBecoming("black", to)
                 }
             }
+            }
+        }
 
+        else if(moved){
+            cases[from].piece!!.position = cases[to]
+            cases[to].piece = cases[from].piece
+            cases[from].piece = null
+            if (cases[to].piece is Pion){
+                if ( to<8  && cases[to].piece!!.color=="white"){
+                    QueenBecoming("white", to)}
+
+                else if (to>55 && cases[to].piece!!.color=="black"  ){
+                    QueenBecoming("black", to)
+                }
+            }
         }
         return moved
     }
@@ -155,8 +152,9 @@ class Board(var top: Float, var left: Float, var right: Float, var bottom: Float
         partie.changeTour()
     }
 
-    fun QueenBecoming(queencolor: String,to : Int) {
+    fun QueenBecoming(queencolor: String, to: Int) {
         cases[to].piece = Reine(cases[to], queencolor)
+
     }
 
 
