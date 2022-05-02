@@ -5,28 +5,27 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
-import kotlin.math.abs
 
 
-class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, var boardFin: Float, var view: DrawingView, val context: Context
+class Board(var top: Float, var left: Float, var right: Float, var bottom: Float, var view: DrawingView, val context: Context
 ) : BecomeQueen {
-    var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
+    var board = RectF(left, top, right,bottom)
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
 
     fun setRect() {
-        board.set(boardDebut, boardHauteur,
-            boardDebut + width, boardFin)
+        board.set(left, top,
+             right, bottom)
     }
     var cases = mutableListOf<Case>()
     var paint = Paint()
     fun initialisation() { // crée les cases du board et les pièces
         if(cases.size < 64){
             var compteur = 0
-            var dx = (width) / 8
-            var dy = (boardFin - boardHauteur) / 8
-            var x_i = boardDebut
-            var y_i = boardHauteur
+            var dx = (right-left) / 8
+            var dy = (bottom - top) / 8
+            var x_i = left
+            var y_i = top
             for (i in 1..8) { //lignes
                 for (j in 1..8) { //colonnes
                     var piece: Piece? = null
@@ -85,7 +84,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
                     x_i += dx
                 }
                 y_i += dy
-                x_i = boardDebut
+                x_i = left
             }
         }
     }
@@ -94,7 +93,6 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
         paint.color = Color.WHITE
         canvas.drawRect(board, paint)
         for (case in cases){
-            case.setRect()
             case.draw(canvas)
         }
     }
@@ -114,9 +112,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
                 cases[from+1].piece = cases[to].piece
                 cases[from].piece = null
                 cases[to].piece = null
-            }
-
-            else {
+            } else {
             mourir(cases[to].piece)
             cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
@@ -143,7 +139,6 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
                     QueenBecoming("black", to)
                 }
             }
-
 
         }
         return moved

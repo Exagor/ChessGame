@@ -21,7 +21,10 @@ class EchecActivity: AppCompatActivity() {
         container.visibility = View.GONE
         var hide_fragcim = true
         var hide_fragset = true
-
+        val PlayerNameWhite = intent.getStringExtra("Nom du joueur (blancs):")
+        val PlayerNameBlack = intent.getStringExtra("Nom du joueur (noirs):")
+        val JoueurBlanc = Joueur(PlayerNameWhite, "white")
+        val JoueurNoir = Joueur(PlayerNameBlack, "black")
 
         tombstone.setOnClickListener {
             //partie pour le fragment
