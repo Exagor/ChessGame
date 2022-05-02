@@ -22,18 +22,20 @@ class EchecActivity: AppCompatActivity() {
         var hide_fragcim = true
         var hide_fragset = true
 
+        val imageFragment = ImageFragment()
+        val manager = supportFragmentManager
+        val transaction = manager.beginTransaction()
 
+        transaction.replace(R.id.fragment_container,imageFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
         tombstone.setOnClickListener {
             //partie pour le fragment
-            val imageFragment = ImageFragment()
-            val manager = supportFragmentManager
-            val transaction = manager.beginTransaction()
             var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
-            imageFragment.UpdateXml(piece_cimetiere)
-
-            transaction.replace(R.id.fragment_container,imageFragment)
-            transaction.addToBackStack(null)
-            transaction.commit()
+            var truc:View? = imageFragment.view
+            if (truc!=null){
+                imageFragment.UpdateXml(piece_cimetiere, truc)
+            }
             //partie pour afficher le cimetière
             if (hide_fragcim){
                 container.visibility = View.VISIBLE

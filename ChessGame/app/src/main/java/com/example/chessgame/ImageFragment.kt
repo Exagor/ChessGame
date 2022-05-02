@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 
 
 class ImageFragment : Fragment() {
-    private lateinit var piece0:ImageView
+    lateinit var piece0:ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -21,13 +21,16 @@ class ImageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Return the fragment view/layout
-        var view = inflater!!.inflate(R.layout.layout_fragment_cimetiere,container,false)
+        var view = inflater.inflate(R.layout.layout_fragment_cimetiere,container,false)
         piece0 =  view.findViewById(R.id.piece0)
-        //piece0.visibility = View.GONE
+        //piece0.visibility = View.VISIBLE
+        println("imagefragment crée")
         return view
     }
-    fun UpdateXml(piece_mortes: MutableList<Piece>){
-        //piece0.visibility = View.GONE
+    fun UpdateXml(piece_mortes: MutableList<Piece>, view: View){
+        println("appel de updatexml")
+        piece0 =  view.findViewById(R.id.piece0)
+        piece0.visibility = View.VISIBLE
         /*for (piece in piece_mortes){
             when (piece){
                 0 -> piece0.setVisibility(View.VISIBLE)
