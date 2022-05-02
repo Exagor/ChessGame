@@ -9,7 +9,7 @@ import kotlin.math.abs
 
 
 class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, var boardFin: Float, var view: DrawingView, val context: Context
-) : BecomeQueen {
+) {
     var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
@@ -152,7 +152,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
         partie.changeTour()
     }
 
-    override fun QueenBecoming(queencolor: String,to : Int) {
+   fun QueenBecoming(queencolor: String,to : Int) {
         cases[to].piece = Reine(cases[to], queencolor)
     }
 
