@@ -50,8 +50,9 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     private fun newGame() {
-        board.initialisation()
-        draw()
+        board = Board( 0f, 0f, 0f, 0f,this, context)
+        onSizeChanged(1080, 1731, 0, 0,)
+        drawing = true
         if (gameOver) {
             gameOver = false
             thread = Thread(this)
