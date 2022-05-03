@@ -55,7 +55,6 @@ id settings_icon
 id textView
 id tombstone
 id vMain
-layout activity_cim
 layout activity_echec
 layout activity_main
 layout layout_fragment_cimetiere

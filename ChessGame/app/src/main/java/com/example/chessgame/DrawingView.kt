@@ -51,8 +51,10 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     private fun newGame() {
-        board = Board( 0f, 0f, 0f, 0f,this, context)
-        onSizeChanged(1080, 1731, 0, 0,)
+        board.clear()
+        board.initialisation()
+        board.cimetiere.reset()
+        board.partie.resetTour()
         drawing = true
         if (gameOver) {
             gameOver = false
@@ -60,7 +62,6 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
             thread.start()
         }
     }
-
 
 
     fun showGameOverDialog(messageId: Int) {
@@ -182,6 +183,11 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
     fun getCimetiere(): MutableList<Piece> {
         return board.cimetiere.Pieces
+    }
+    fun getCimReset():Boolean{
+        var res = board.cimetiere.res
+        board.cimetiere.res = false
+        return res
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int,

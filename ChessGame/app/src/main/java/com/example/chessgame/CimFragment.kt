@@ -9,7 +9,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 
 
-class ImageFragment : Fragment() {
+class CimFragment : Fragment() {
     lateinit var piece0:ImageView
     lateinit var piece1:ImageView
     lateinit var piece2:ImageView
@@ -22,6 +22,7 @@ class ImageFragment : Fragment() {
     lateinit var piece9:ImageView
     lateinit var piece10:ImageView
     lateinit var piece11:ImageView
+    lateinit var Imagelist: MutableList<ImageView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,11 +35,9 @@ class ImageFragment : Fragment() {
     ): View? {
         // Return the fragment view/layout
         var view = inflater.inflate(R.layout.layout_fragment_cimetiere,container,false)
-        println("imagefragment crée")
         return view
     }
     fun UpdateXml(piece_mortes: MutableList<Piece>, view: View){
-        println("appel de updatexml")
         piece0 =  view.findViewById(R.id.piece0)
         piece1 =  view.findViewById(R.id.piece1)
         piece2 =  view.findViewById(R.id.piece2)
@@ -51,7 +50,7 @@ class ImageFragment : Fragment() {
         piece9 =  view.findViewById(R.id.piece9)
         piece10 =  view.findViewById(R.id.piece10)
         piece11 =  view.findViewById(R.id.piece11)
-        var Imagelist: MutableList<ImageView> = mutableListOf(piece0,piece1,piece2,piece3,piece4,piece5,piece6,piece7,piece8,piece9,piece10,piece11)
+        Imagelist = mutableListOf(piece0,piece1,piece2,piece3,piece4,piece5,piece6,piece7,piece8,piece9,piece10,piece11)
 
         var count = 0
         for (piece in piece_mortes){
@@ -60,6 +59,11 @@ class ImageFragment : Fragment() {
             count+=1
             }
         }
+    fun reset(){
+        for (img in Imagelist){
+            img.visibility = View.GONE
+        }
+    }
 
     override fun onPause() {
         super.onPause()

@@ -13,13 +13,14 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
     var board = RectF(left, top, right,bottom)
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
+    var cases = mutableListOf<Case>()
+    var paint = Paint()
 
     fun setRect() {
         board.set(left, top,
             right , bottom)
     }
-    var cases = mutableListOf<Case>()
-    var paint = Paint()
+
     fun initialisation() { // crée les cases du board et les pièces
         if(cases.size < 64){
             var compteur = 0
@@ -88,6 +89,11 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
                 x_i = left
             }
         }
+    }
+    fun clear(){
+        cases = mutableListOf<Case>()
+        paint = Paint()
+        cimetiere.res = true
     }
 
     fun draw(canvas: Canvas) {
@@ -162,7 +168,6 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
 
     fun QueenBecoming(queencolor: String, to: Int) {
         cases[to].piece = Reine(cases[to], queencolor)
-
     }
 
 

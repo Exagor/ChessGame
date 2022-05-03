@@ -19,12 +19,13 @@ class EchecActivity: AppCompatActivity() {
         var settings = findViewById<ImageView>(R.id.settings_icon)
         var container = findViewById<FragmentContainerView>(R.id.fragment_container)
         container.visibility = View.GONE
-        val imageFragment = ImageFragment()
+        val cimFragment = CimFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_container,imageFragment)
+        transaction.replace(R.id.fragment_container,cimFragment)
         transaction.addToBackStack(null)
         transaction.commit()
+        var reset = false
         var hide_fragcim = true
         var hide_fragset = true
         val PlayerNameWhite = intent.getStringExtra("Nom du joueur (blancs):")
@@ -34,13 +35,11 @@ class EchecActivity: AppCompatActivity() {
 
         tombstone.setOnClickListener {
             //partie pour le fragment
-
+            reset = drawingView.getCimReset()
             var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
-
-
-            var truc:View? = imageFragment.view
+            var truc:View? = cimFragment.view
             if (truc!=null){
-                imageFragment.UpdateXml(piece_cimetiere, truc)
+                cimFragment.UpdateXml(piece_cimetiere, truc)
             }
             //partie pour afficher le cimetière
             if (hide_fragcim){
@@ -51,23 +50,9 @@ class EchecActivity: AppCompatActivity() {
                 container.visibility = View.GONE
                 hide_fragcim = true
             }
-
-            // Partie pour update le cimetière
-
-            /*for (piece in piece_cimetiere){
-                when (piece.id){
-                    0 -> piece0.setVisibility(View.VISIBLE)
-                    1 -> piece1.setVisibility(View.VISIBLE)
-                    2 -> piece2.setVisibility(View.VISIBLE)
-                    3 -> piece3.setVisibility(View.VISIBLE)
-                    4 -> piece4.setVisibility(View.VISIBLE)
-                    5 -> piece5.setVisibility(View.VISIBLE)
-                    6 -> piece6.setVisibility(View.VISIBLE)
-                    7 -> piece7.setVisibility(View.VISIBLE)
-                    8 -> piece8.setVisibility(View.VISIBLE)
-                    9 -> piece9.setVisibility(View.VISIBLE)
-                }
-            }*/
+            if (reset){
+                cimFragment.reset()
+            }
         }
         settings.setOnClickListener {
             //fragment settings

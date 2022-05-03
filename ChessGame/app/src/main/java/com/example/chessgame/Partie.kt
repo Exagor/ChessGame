@@ -8,6 +8,9 @@ class Partie {
     fun changeTour(){
         tour = !tour
     }
+    fun resetTour(){
+        tour = true
+    }
     fun terminer(){
         enCours = false
     }

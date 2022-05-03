@@ -5,23 +5,13 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
 
-class Cimetiere(/*var cimetiereHauteur: Float, var cimetiereDebut: Float, var cimetiereFin: Float, var right: Float, var view: DrawingView, */var Pieces : MutableList<Piece>)
+class Cimetiere(var Pieces : MutableList<Piece>)
 {
-   /* val r = RectF(cimetiereDebut, cimetiereHauteur, cimetiereDebut+right, cimetiereFin)
-    val paint = Paint()
-
-    fun setRect() {
-        r.set(cimetiereDebut, cimetiereHauteur,
-            cimetiereDebut + right, cimetiereFin)
-    }
-
-    fun draw(canvas: Canvas) {
-        paint.color = Color.GRAY
-        canvas.drawRect(r, paint)
-
-
-    }*/
+    var res = false
     fun ajouterPiece(piece: Piece){
         Pieces.add(piece)
+    }
+    fun reset(){
+        Pieces.clear()
     }
 }

@@ -48,7 +48,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
-        android:name="com.example.chessgame.ImageFragment"
+        android:name="com.example.chessgame.CimFragment"
         android:layout_width="360dp"
         android:layout_height="172dp"
         app:layout_constraintBottom_toBottomOf="parent"
