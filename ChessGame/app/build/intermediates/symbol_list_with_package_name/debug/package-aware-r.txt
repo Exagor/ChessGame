@@ -2866,6 +2866,8 @@ id peekHeight
 id percent
 id piece0
 id piece1
+id piece10
+id piece11
 id piece2
 id piece3
 id piece4

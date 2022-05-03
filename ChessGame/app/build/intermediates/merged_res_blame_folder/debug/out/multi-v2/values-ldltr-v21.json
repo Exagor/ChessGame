@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/alice/.gradle/caches/transforms-3/ba512f38f0bacee7d86638331ba04ff4/transformed/appcompat-1.4.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "C:\\Users\\alexa\\.gradle\\caches\\transforms-3\\ba512f38f0bacee7d86638331ba04ff4\\transformed\\appcompat-1.4.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
