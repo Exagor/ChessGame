@@ -38,7 +38,9 @@ drawable w_pawn_png_512px
 drawable w_queen_png_512px
 drawable w_rook_png_512px
 id button
-id fragment_container
+id buttonreset
+id fragment_container1
+id fragment_container2
 id piece0
 id piece1
 id piece10
@@ -58,6 +60,7 @@ id vMain
 layout activity_echec
 layout activity_main
 layout layout_fragment_cimetiere
+layout layout_fragment_setting
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

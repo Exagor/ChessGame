@@ -88,6 +88,10 @@
         "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_fragment_setting.xml.flat",
+        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\layout\\layout_fragment_setting.xml"
+    },
+    {
         "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },

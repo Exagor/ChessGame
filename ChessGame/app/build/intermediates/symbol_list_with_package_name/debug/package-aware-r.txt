@@ -2634,6 +2634,7 @@ id bounceEnd
 id bounceStart
 id button
 id buttonPanel
+id buttonreset
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2726,7 +2727,8 @@ id fixed
 id flip
 id floating
 id forever
-id fragment_container
+id fragment_container1
+id fragment_container2
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -3132,6 +3134,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout layout_fragment_cimetiere
+layout layout_fragment_setting
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
