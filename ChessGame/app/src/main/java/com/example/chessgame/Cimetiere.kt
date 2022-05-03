@@ -14,4 +14,15 @@ class Cimetiere(var Pieces : MutableList<Piece>)
     fun reset(){
         Pieces.clear()
     }
+    fun getScore(): MutableList<Int>{
+        var scorew = 0
+        var scoreb = 0
+        for (piece in Pieces){
+            when (piece.color){
+                "white" -> scorew += piece.value
+                "black" -> scoreb += piece.value
+            }
+        }
+        return mutableListOf(scorew,scoreb)
+    }
 }

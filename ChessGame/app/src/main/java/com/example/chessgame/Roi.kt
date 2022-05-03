@@ -17,6 +17,7 @@ class Roi(position: Case, color: String): Piece(position, color), Roque {
         }
         return false
     }
+    override var value = 0
 
 
 

@@ -17,6 +17,7 @@ class Reine(position: Case, color: String): Piece(position, color) {
         }
         return false
     }
+    override var value = 9
 
 
 

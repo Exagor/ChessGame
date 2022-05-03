@@ -19,6 +19,7 @@ class Pion(position: Case, color: String): Piece(position, color) {
           return (color == "black" && newPos.row == position.row +1)|| (color == "white" && newPos.row +1 == position.row )}
        return false
     }
+    override var value = 1
 
 
 
