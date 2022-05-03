@@ -17,15 +17,20 @@ class EchecActivity: AppCompatActivity() {
 
         var tombstone = findViewById<ImageView>(R.id.tombstone)
         var settings = findViewById<ImageView>(R.id.settings_icon)
-        var container = findViewById<FragmentContainerView>(R.id.fragment_container)
-        container.visibility = View.GONE
+        var container1 = findViewById<FragmentContainerView>(R.id.fragment_container1)
+        var container2 = findViewById<FragmentContainerView>(R.id.fragment_container2)
+        container1.visibility = View.GONE
+        container2.visibility = View.GONE
         val cimFragment = CimFragment()
+        val setFragment = SetFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_container,cimFragment)
+        transaction.replace(R.id.fragment_container1,cimFragment)
         transaction.addToBackStack(null)
         transaction.commit()
-        var reset = false
+        /*transaction.replace(R.id.fragment_container2,setFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()*/
         var hide_fragcim = true
         var hide_fragset = true
         val PlayerNameWhite = intent.getStringExtra("Nom du joueur (blancs):")
@@ -35,7 +40,7 @@ class EchecActivity: AppCompatActivity() {
 
         tombstone.setOnClickListener {
             //partie pour le fragment
-            reset = drawingView.getCimReset()
+            var reset = drawingView.getCimReset()
             var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
             var truc:View? = cimFragment.view
             if (truc!=null){
@@ -43,11 +48,11 @@ class EchecActivity: AppCompatActivity() {
             }
             //partie pour afficher le cimetière
             if (hide_fragcim){
-                container.visibility = View.VISIBLE
+                container1.visibility = View.VISIBLE
                 hide_fragcim = false
             }
             else{
-                container.visibility = View.GONE
+                container1.visibility = View.GONE
                 hide_fragcim = true
             }
             if (reset){
@@ -56,6 +61,14 @@ class EchecActivity: AppCompatActivity() {
         }
         settings.setOnClickListener {
             //fragment settings
+            if (hide_fragset){
+                container2.visibility = View.VISIBLE
+                hide_fragset = false
+            }
+            else{
+                container2.visibility = View.GONE
+                hide_fragset = true
+            }
         }
     }
 
