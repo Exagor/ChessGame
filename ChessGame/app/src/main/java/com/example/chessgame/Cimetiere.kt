@@ -22,8 +22,6 @@ class Cimetiere(/*var cimetiereHauteur: Float, var cimetiereDebut: Float, var ci
 
     }*/
     fun ajouterPiece(piece: Piece){
-        //if (Pieces == null)
-            Pieces = mutableListOf(piece)
         Pieces.add(piece)
     }
 }
