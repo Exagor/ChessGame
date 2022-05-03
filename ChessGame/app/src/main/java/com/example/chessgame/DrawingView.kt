@@ -14,6 +14,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 
 import android.graphics.Paint
+import kotlin.math.min
 
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
@@ -113,11 +114,11 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         super.onSizeChanged(w, h, oldw, oldh)
         screenWidth = w.toFloat()
         screenHeight = h.toFloat()
-
-        board.width = (w*13 / 13.3f)
-        board.boardHauteur= (h*2 / 16f)
-        board.boardDebut = (w / 80f)
-        board.boardFin = ((h*40/46f))
+        val side = min(screenHeight, screenWidth)*90/100
+        board.left = (screenWidth-side)/2
+        board.right= (screenWidth+side)/2
+        board.top = (screenHeight-side)/2
+        board.bottom = (screenHeight+side)/2
         board.setRect()
         board.initialisation()
 

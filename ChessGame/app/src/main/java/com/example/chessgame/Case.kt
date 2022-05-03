@@ -30,7 +30,7 @@ class Case(var row:Int, var col:Int, var x1:Float,var y1: Float,var x2:Float,var
         if (piece != null) {
             val image = piece!!.image
             val bmp = BitmapFactory.decodeResource(context.resources, image)
-            val rect = RectF(x1+8, y1+10, x2-8, y2-10)
+            val rect = RectF(x1+8, y1+8, x2-8, y2-8)
             canvas.drawBitmap(bmp!!, null, rect, null)
         }
 

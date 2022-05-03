@@ -8,25 +8,25 @@ import android.graphics.RectF
 import kotlin.math.abs
 
 
-class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, var boardFin: Float, var view: DrawingView, val context: Context
+class Board(var left: Float, var right: Float, var top: Float, var bottom: Float, var view: DrawingView, val context: Context
 )  {
-    var board = RectF(boardDebut, boardHauteur, boardDebut+width,boardFin)
+    var board = RectF(left, top, right,bottom)
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
 
     fun setRect() {
-        board.set(boardDebut, boardHauteur,
-            boardDebut + width, boardFin)
+        board.set(left, top,
+            right , bottom)
     }
     var cases = mutableListOf<Case>()
     var paint = Paint()
     fun initialisation() { // crée les cases du board et les pièces
         if(cases.size < 64){
             var compteur = 0
-            var dx = (width) / 8
-            var dy = (boardFin - boardHauteur) / 8
-            var x_i = boardDebut
-            var y_i = boardHauteur
+            var dx = (right-left) / 8
+            var dy = (bottom - top) / 8
+            var x_i = left
+            var y_i = top
             for (i in 1..8) { //lignes
                 for (j in 1..8) { //colonnes
                     var piece: Piece? = null
@@ -85,7 +85,7 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
                     x_i += dx
                 }
                 y_i += dy
-                x_i = boardDebut
+                x_i = left
             }
         }
     }
@@ -108,6 +108,14 @@ class Board(var boardHauteur: Float, var boardDebut: Float, var width: Float, va
         if(cases[to].piece != null && moved){
             if( cases[to].piece is Roi){
                 view.king_dead(cases[to].piece!!.color)
+            }
+            else if(cases[to].piece!!.color == cases[from].piece!!.color) { //si roque
+                cases[to-1].piece = cases[from].piece
+                cases[from].piece!!.position = cases[to-1]
+                cases[from+1].piece = cases[to].piece
+                cases[to].piece!!.position = cases[from+1]
+                cases[to].piece = null
+                cases[from].piece = null
             }
             else {
             mourir(cases[to].piece)
