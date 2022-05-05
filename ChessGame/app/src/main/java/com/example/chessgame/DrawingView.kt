@@ -106,7 +106,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
 
     override fun run() {
         while (drawing) {
-           draw()
+
         }
     }
 
@@ -159,22 +159,23 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                             println("dans premier if")
                             onfocus = (row - 1) * 8 + col - 1
                             board.selection(onfocus!!, true)
+                            draw()
                             return
                     }
                     }
                     if (onfocus != null) {
                         if (board.bouger(onfocus!!, (row - 1) * 8 + col - 1)) {
-                            println("a bougé")
                             board.ChangeTour()
                         }
-                        println("onfocus!=null")
+
                         board.selection(onfocus!!, false)
                         onfocus = null
                     } else if (onfocus != null) {
-                        println("dans else")
+
                         board.selection(onfocus!!, false)
                         onfocus = null
                     }
+                    draw()
                     break
             }
         }

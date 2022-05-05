@@ -115,13 +115,18 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
             if( cases[to].piece is Roi){
                 view.king_dead(cases[to].piece!!.color)
             }
-            else if(cases[to].piece!!.color == cases[from].piece!!.color) { //si roque
-                cases[to-1].piece = cases[from].piece
-                cases[from].piece!!.position = cases[to-1]
-                cases[from+1].piece = cases[to].piece
-                cases[to].piece!!.position = cases[from+1]
-                cases[to].piece = null
-                cases[from].piece = null
+             if(cases[to].piece!!.color == cases[from].piece!!.color) { //si roque
+                if(cases[to].piece!!.bouger(cases[from],cases)){
+                    var toPos = cases[to].piece!!.position
+                    val tocol = toPos.col
+                    var fromPos = cases[from].piece!!.position
+                    val fromcol = fromPos.col
+                    println("$fromcol $tocol")
+                    cases[(fromPos.row - 1) * 8 + fromPos.col - 1].piece = cases[from].piece
+                    cases[(toPos.row - 1) * 8 + toPos.col - 1].piece = cases[to].piece
+                    cases[to].piece = null
+                    cases[from].piece = null
+                }
             }
             else {
             mourir(cases[to].piece)
