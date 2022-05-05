@@ -2626,6 +2626,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id blackPlayer
 id blocking
 id bottom
 id bounce
@@ -2708,6 +2709,8 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextPersonName1
+id editTextPersonName2
 id edit_query
 id elastic
 id end
@@ -3022,6 +3025,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id west
+id whitePlayer
 id withText
 id withinBounds
 id wrap
@@ -3336,6 +3340,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
+string nom_du_joueur_blanc
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

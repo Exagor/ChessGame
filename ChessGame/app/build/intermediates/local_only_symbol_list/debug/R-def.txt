@@ -37,8 +37,11 @@ drawable w_knight_png_512px
 drawable w_pawn_png_512px
 drawable w_queen_png_512px
 drawable w_rook_png_512px
+id blackPlayer
 id button
 id buttonreset
+id editTextPersonName1
+id editTextPersonName2
 id fragment_container1
 id fragment_container2
 id piece0
@@ -57,6 +60,7 @@ id settings_icon
 id textView
 id tombstone
 id vMain
+id whitePlayer
 layout activity_echec
 layout activity_main
 layout layout_fragment_cimetiere
@@ -64,6 +68,7 @@ layout layout_fragment_setting
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string nom_du_joueur_blanc
 string reset_game
 string win_blanc
 string win_noir

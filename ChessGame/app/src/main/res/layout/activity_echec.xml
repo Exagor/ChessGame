@@ -10,6 +10,18 @@
     android:backgroundTint="#F4CCCC"
     tools:context=".EchecActivity">
 
+    <TextView
+        android:id="@+id/whitePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="joueur blanc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914" />
+
     <com.example.chessgame.DrawingView
         android:id="@+id/vMain"
         android:layout_width="wrap_content"
@@ -71,6 +83,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tombstone"
         app:layout_constraintVertical_bias="0.045"
         tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/blackPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="joueur noir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

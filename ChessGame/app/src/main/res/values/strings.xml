@@ -3,4 +3,5 @@
     <string name="reset_game">Redémarre le jeu</string>
     <string name="win_blanc">Les blancs ont gagné  !</string>
     <string name="win_noir">Les noirs ont gagné  !</string>
+    <string name="nom_du_joueur_blanc">Nom du joueur blanc</string>
 </resources>

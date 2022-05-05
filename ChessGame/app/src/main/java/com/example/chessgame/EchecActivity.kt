@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.FragmentContainerView
 
 class EchecActivity: AppCompatActivity() {
@@ -33,10 +34,16 @@ class EchecActivity: AppCompatActivity() {
         transaction.commit()*/
         var hide_fragcim = true
         var hide_fragset = true
-        val PlayerNameWhite = intent.getStringExtra("Nom du joueur (blancs):")
-        val PlayerNameBlack = intent.getStringExtra("Nom du joueur (noirs):")
-        val JoueurBlanc = Joueur(PlayerNameWhite, "white")
-        val JoueurNoir = Joueur(PlayerNameBlack, "black")
+        // affichage des noms et création des joueurs
+        val NamePlayerWhite = intent.getStringExtra("joueur blanc")
+        val NamePlayerBlack = intent.getStringExtra("joueur noir")
+        val JoueurBlanc = Joueur(NamePlayerWhite, "white")
+        val JoueurNoir = Joueur(NamePlayerBlack, "black")
+        var PlayerWhite = findViewById<TextView>(R.id.whitePlayer)
+        var PlayerBlack = findViewById<TextView>(R.id.blackPlayer)
+        PlayerWhite.setText(NamePlayerWhite)
+        PlayerBlack.setText(NamePlayerBlack)
+
 
         tombstone.setOnClickListener {
             //partie pour le fragment
