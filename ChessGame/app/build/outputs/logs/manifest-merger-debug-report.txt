@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\alexa\.gradle\caches\transforms-3\65c0bb641c5cc15378c451a1cda89bde\transformed\core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\alexa\.gradle\caches\transforms-3\f49935e10f9d3b78438d1014426100a3\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alexa\.gradle\caches\transforms-3\6220fde917cda44a74f97f5dbd738388\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
@@ -44,25 +44,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alexa\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alexa\.gradle\caches\transforms-3\2fe16a520b0bfb032a788a3d802e6d59\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\alexa\.gradle\caches\transforms-3\7065d7f59015c8ea79df9e21d87bb5db\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alexa\.gradle\caches\transforms-3\afb13ffca8cf2864f5bd087f44c754c9\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:5:5-27:19
+ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\alexa\.gradle\caches\transforms-3\f49935e10f9d3b78438d1014426100a3\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\alexa\.gradle\caches\transforms-3\f49935e10f9d3b78438d1014426100a3\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alexa\.gradle\caches\transforms-3\6220fde917cda44a74f97f5dbd738388\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -84,9 +84,9 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alexa\.gradle\cach
 	android:label
 		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:9:9-53
 	android:icon
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:7:9-42
 	android:allowBackup
 		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
@@ -97,28 +97,22 @@ ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\sr
 		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:14:13-37
 	android:name
 		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:13:13-42
-activity#com.example.chessgame.CimActivity
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:15:9-17:40
-	android:exported
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:17:13-37
-	android:name
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:16:13-40
 activity#com.example.chessgame.MainActivity
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:18:9-26:20
+ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:15:9-23:20
 	android:exported
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:17:13-36
 	android:name
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:19:13-41
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml:21:27-74
 uses-sdk
 INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\alexa\AndroidStudioProjects\ChessGameGithub\ChessGame\app\src\main\AndroidManifest.xml

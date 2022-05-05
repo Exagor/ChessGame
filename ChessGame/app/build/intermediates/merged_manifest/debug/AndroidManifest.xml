@@ -12,17 +12,14 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/knighticon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/knighticon_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.ChessGame" >
         <activity
             android:name="com.example.chessgame.EchecActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.chessgame.CimActivity"
             android:exported="false" />
         <activity
             android:name="com.example.chessgame.MainActivity"

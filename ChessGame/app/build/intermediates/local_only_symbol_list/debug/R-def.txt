@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color beige
 color black
+color knighticon_background
 color purple_200
 color purple_500
 color purple_700
@@ -68,6 +69,9 @@ layout layout_fragment_cimetiere
 layout layout_fragment_setting
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap knighticon
+mipmap knighticon_foreground
+mipmap knighticon_round
 string app_name
 string nom_du_joueur_blanc
 string reset_game
