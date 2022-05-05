@@ -1,5 +1,6 @@
 package com.example.chessgame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -29,9 +30,6 @@ class EchecActivity: AppCompatActivity() {
         transaction.replace(R.id.fragment_container1,cimFragment)
         transaction.addToBackStack(null)
         transaction.commit()
-        /*transaction.replace(R.id.fragment_container2,setFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()*/
         var hide_fragcim = true
         var hide_fragset = true
         // affichage des noms et création des joueurs
@@ -77,6 +75,9 @@ class EchecActivity: AppCompatActivity() {
                 hide_fragset = true
             }
         }
+    }
+    fun ClickReset(){
+        drawingView.newGame()
     }
 
     override fun onPause() {

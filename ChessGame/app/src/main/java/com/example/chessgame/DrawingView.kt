@@ -50,7 +50,7 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         gameOver = true
     }
 
-    private fun newGame() {
+    fun newGame() {
         board.clear()
         board.initialisation()
         board.cimetiere.reset()
@@ -138,8 +138,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
-                val x = event.rawX- 30
-                val y = event.rawY -15
+                val x = event.rawX
+                val y = event.rawY - 100
                 checkCase(x, y)
             }
         }
