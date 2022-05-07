@@ -8,6 +8,8 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
     var cases = mutableListOf<Case>()
+    var scorew = 0
+    var scoreb = 0
 
 
 
@@ -60,7 +62,6 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
 
     fun clear(){
         cases = mutableListOf()
-
         cimetiere.res = true
     }
 
@@ -69,6 +70,10 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
             case.setRect()
             case.draw(canvas)
         }
+        //pour actualiser les scores
+        var scores = cimetiere.getScore()
+        scorew = scores[0]
+        scoreb = scores[1]
     }
 
     fun selection(caseRef:Int , colorier: Boolean){

@@ -44,6 +44,8 @@ id piece6
 id piece7
 id piece8
 id piece9
+id scoreb
+id scorew
 id settings_icon
 id textView
 id textView2

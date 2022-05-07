@@ -19,6 +19,10 @@ class EchecActivity: AppCompatActivity() {
         val settings = findViewById<ImageView>(R.id.settings_icon)
         val container1 = findViewById<FragmentContainerView>(R.id.fragment_container1)
         val container2 = findViewById<FragmentContainerView>(R.id.fragment_container2)
+        var scorew = findViewById<TextView>(R.id.scorew)
+        var scoreb = findViewById<TextView>(R.id.scoreb)
+        drawingView.scorew = scorew
+        drawingView.scoreb = scoreb
         container1.visibility = View.GONE
         container2.visibility = View.GONE
         val cimFragment = CimFragment()
@@ -50,7 +54,7 @@ class EchecActivity: AppCompatActivity() {
             if (truc!=null){
                 cimFragment.UpdateXml(piece_cimetiere, truc)
             }
-            //partie pour afficher le cimetière
+            //partie pour afficher le cimetière ou le cacher
             if (hide_fragcim){
                 container1.visibility = View.VISIBLE
                 hide_fragcim = false

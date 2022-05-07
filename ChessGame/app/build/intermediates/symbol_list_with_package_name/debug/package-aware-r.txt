@@ -2888,6 +2888,8 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scoreb
+id scorew
 id screen
 id scroll
 id scrollIndicatorDown

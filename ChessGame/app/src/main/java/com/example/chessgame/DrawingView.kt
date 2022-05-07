@@ -11,6 +11,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 import kotlin.math.min
@@ -18,6 +19,8 @@ import kotlin.math.min
 
 class DrawingView @JvmOverloads constructor (context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = 0): SurfaceView(context, attributes,defStyleAttr), SurfaceHolder.Callback, Runnable {
     private lateinit var canvas: Canvas
+    lateinit var scorew: TextView
+    lateinit var scoreb: TextView
     //création du board
     private var board = Board( 0f, 0f, 0f, 0f,this, context)
     private var screenWidth = 0f
@@ -123,6 +126,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
+        scorew.text = board.scorew.toString()
+        scoreb.text = board.scoreb.toString()
         when (event!!.action){
             MotionEvent.ACTION_DOWN -> {
                 val x = event.rawX

@@ -19,8 +19,8 @@ class Cimetiere(var Pieces : MutableList<Piece>)
         var scoreb = 0
         for (piece in Pieces){
             when (piece.color){
-                "white" -> scorew += piece.value
-                "black" -> scoreb += piece.value
+                "white" -> scoreb += piece.value
+                "black" -> scorew += piece.value
             }
         }
         return mutableListOf(scorew,scoreb)
