@@ -7,6 +7,7 @@ class Fou(position: Case, color: String): Piece(position, color) {
     override fun bouger(newPos: Case, cases: MutableList<Case>): Boolean {
         if (abs(newPos.row - position.row) == abs(newPos.col - position.col) && isDiagonalFree(position, newPos, cases)) {
             if (newPos.piece == null || newPos.piece!!.color != color) {
+                position = newPos
                 return true
             }
         }

@@ -1,29 +1,36 @@
 package com.example.chessgame
 import android.content.Context
 import android.graphics.*
-import android.widget.Button
 
-class Case(var row:Int, var col:Int, var x1:Float,var y1: Float,var x2:Float,var y2:Float, val view: DrawingView, val context : Context) {
+class Case(
+    var row: Int,
+    var col: Int,
+    private var x1: Float,
+    private var y1: Float,
+    private var x2: Float,
+    private var y2: Float,
+    private val context: Context
+) {
     var rectangle = RectF(x1, y1, x2, y2)
-    val paint = Paint()
+    private val paint = Paint()
     var piece: Piece? = null
     var focus = false
-
+    var accessible = false
 
     fun setRect() {
         rectangle.set(x1,y1,x2,y2)
     }
 
     fun draw(canvas: Canvas) {
-        if (focus){
-            paint.color= Color.argb(255,192,108,136)
-        }
+        when {
+            accessible -> paint.color = Color.argb(255,192,108,100)
 
-        else if ((col+row)%2==0){
-            paint.color = Color.argb(255,158,216,219)
-        }
-        else {
-            paint.color = Color.argb(255,4,123,159)
+            focus -> paint.color= Color.argb(255,192,108,136)
+
+            (col+row)%2==0 -> paint.color = Color.argb(255,158,216,219)
+
+            else -> paint.color = Color.argb(255,4,123,159)
+
         }
 
         canvas.drawRect(rectangle, paint)

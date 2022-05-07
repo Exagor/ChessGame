@@ -6,20 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F6C6D6"
-    android:backgroundTint="#F4CCCC"
     tools:context=".EchecActivity">
 
-    <TextView
-        android:id="@+id/whitePlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="joueur blanc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tombstone"
-        app:layout_constraintVertical_bias="0.656" />
 
     <com.example.chessgame.DrawingView
         android:id="@+id/vMain"
@@ -29,6 +17,19 @@
         android:layout_marginTop="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/whitePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="joueur blanc"
+        android:textColor="#F4C095"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tombstone"
+        app:layout_constraintVertical_bias="0.857" />
 
     <ImageView
         android:id="@+id/tombstone"
@@ -41,8 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/tombstone"
-         />
+        app:srcCompat="@drawable/tombstone" />
 
     <ImageView
         android:id="@+id/settings_icon"
@@ -56,6 +56,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/settings_icon" />
+
+    <TextView
+        android:id="@+id/blackPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="joueur noir"
+        android:textColor="#F4C095"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tombstone"
+        app:layout_constraintVertical_bias="0.023" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container1"
@@ -80,17 +92,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tombstone"
         app:layout_constraintVertical_bias="0.081"
         tools:visibility="invisible" />
-
-    <TextView
-        android:id="@+id/blackPlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="joueur noir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tombstone"
-        app:layout_constraintVertical_bias="0.023" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

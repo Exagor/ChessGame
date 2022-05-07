@@ -7,22 +7,18 @@ class Tour(position: Case, color: String): Piece(position, color), Roque {
     override fun bouger(newPos: Case, cases: MutableList<Case>): Boolean {
         if(newPos.piece == null || newPos.piece!!.color != color ){
             if (abs(newPos.row - position.row) == 0 && isHorizontalFree(position, newPos, cases)) {
-                println("horizontal")
                 if (newPos.piece == null||newPos.piece!!.color != color) {
+                    position = newPos
                     return true
                 }
             } else if (abs(newPos.col - position.col) == 0 && isVerticalFree(position, newPos, cases)) {
-                println("vertical")
                 if (newPos.piece == null || newPos.piece!!.color != color) {
+                    position = newPos
                     return true
                 }
             }
         }
-
         else{
-            val a = newPos.row
-            val b = newPos.col
-
             if(RoqueValide((newPos.row-1)*8 +newPos.col -1 ,(position.row-1)*8 +position.col-1, cases)){
             return true}
         }
@@ -31,11 +27,11 @@ class Tour(position: Case, color: String): Piece(position, color), Roque {
     override var value = 5
     override fun RoqueValide(caseRoi: Int, caseTour: Int, cases: MutableList<Case>): Boolean {
         if (cases[caseTour].col == 1) {
-            position.col +=3
+            position.col += 3
             return true
         }
         if (cases[caseTour].col == 8) {
-            position.col -=2
+            position.col -= 2
             return true
         }
          return false

@@ -10,7 +10,10 @@ class Roi(position: Case, color: String): Piece(position, color), Roque {
         if(newPos.piece == null || newPos.piece!!.color != color){
             val deltaCol = abs(position.col - newPos.col)
             val deltaRow = abs(position.row - newPos.row)
-            return deltaCol == 1 && deltaRow == 1 || deltaCol + deltaRow == 1
+            if( deltaCol == 1 && deltaRow == 1 || deltaCol + deltaRow == 1){
+                position = newPos
+                return true
+            }
         }
         else if (newPos.piece != null && newPos.piece!!.color == color){
             if(RoqueValide((position.row-1)*8 +position.col -1,(newPos.row-1)*8 +newPos.col -1, cases)){

@@ -1,250 +1,198 @@
 [
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_bishop_black.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\bishop_black.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_king_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_king_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_knighticon_round.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\knighticon_round.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_knighticon_round.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-hdpi/knighticon_round.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_pawn_white.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\pawn_white.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_layout_fragment_cimetiere.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/layout_fragment_cimetiere.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_knighticon.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-hdpi\\knighticon.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_knighticon_foreground.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-hdpi/knighticon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_w_rook_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\w_rook_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_pawn_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_pawn_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_knighticon_foreground.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-mdpi\\knighticon_foreground.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_knighticon_round.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-mdpi\\knighticon_round.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_bishop_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_bishop_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_settings_icon.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable-v24\\settings_icon.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_knighticon.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/knighticon.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_w_pawn_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\w_pawn_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_knighticon_foreground.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-mdpi/knighticon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_knighticon_round.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-anydpi-v26/knighticon_round.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_knighticon_round.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\knighticon_round.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_bishop_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_bishop_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_knighticon.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\knighticon.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_rook_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_rook_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_bishop_white.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\bishop_white.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_tombstone.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/tombstone.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_fragment_setting.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\layout\\layout_fragment_setting.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_b_king_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\b_king_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_knighticon_round.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxxhdpi/knighticon_round.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_king_black.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\king_black.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_knight_black.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\knight_black.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_king_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_king_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_echec.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\layout\\activity_echec.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_b_knight_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\b_knight_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_w_knight_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\w_knight_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_knighticon_foreground.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxhdpi\\knighticon_foreground.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_layout_fragment_setting.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/layout_fragment_setting.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_knighticon.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-anydpi-v26/knighticon.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_knighticon_foreground.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxxhdpi/knighticon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_pawn_black.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\pawn_black.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable-v24_settings_icon.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable-v24/settings_icon.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_knighticon.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxhdpi\\knighticon.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_knighticon_round.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/knighticon_round.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_knighticon_foreground.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/knighticon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_knighticon.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\knighticon.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_rook_white.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\rook_white.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_rook_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_rook_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_queen_black.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\queen_black.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_queen_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_queen_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_b_rook_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\b_rook_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_b_knight_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/b_knight_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_knighticon_foreground.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\knighticon_foreground.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_knighticon.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/knighticon.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_queen_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_queen_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_pionmenu.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\pionmenu.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_knighticon_round.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-mdpi/knighticon_round.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_b_bishop_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\b_bishop_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_knighticon.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-mdpi/knighticon.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_rook_black.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\rook_black.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_knighticon.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxxhdpi/knighticon.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_w_bishop_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\w_bishop_png_512px.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_knight_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_knight_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_tombstone.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\tombstone.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_knighticon_round.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxhdpi\\knighticon_round.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/drawable_w_pawn_png_512px.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/drawable/w_pawn_png_512px.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_knighticon.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-mdpi\\knighticon.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_knighticon_round.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xhdpi/knighticon_round.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_queen_white.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\queen_white.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_knighticon_foreground.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-xxhdpi/knighticon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_knighticon_foreground.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-hdpi\\knighticon_foreground.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/layout_activity_echec.xml.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/layout/activity_echec.xml"
     },
     {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_king_white.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\king_white.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_knighticon_round.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xhdpi\\knighticon_round.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_w_king_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\w_king_png_512px.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_b_pawn_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\b_pawn_png_512px.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_fragment_cimetiere.xml.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\layout\\layout_fragment_cimetiere.xml"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_knight_white.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\knight_white.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_knighticon.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xhdpi\\knighticon.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_knighticon_round.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-hdpi\\knighticon_round.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_b_queen_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\b_queen_png_512px.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_w_queen_png_512px.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\drawable\\w_queen_png_512px.png"
-    },
-    {
-        "merged": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_knighticon_foreground.png.flat",
-        "source": "C:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\src\\main\\res\\mipmap-xhdpi\\knighticon_foreground.png"
+        "merged": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_knighticon.png.flat",
+        "source": "/Users/alice/AndroidStudioProjects/ChessGame/ChessGame/app/src/main/res/mipmap-hdpi/knighticon.png"
     }
 ]

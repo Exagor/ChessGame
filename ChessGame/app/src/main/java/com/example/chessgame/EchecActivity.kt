@@ -1,30 +1,28 @@
 package com.example.chessgame
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
 
 class EchecActivity: AppCompatActivity() {
 
-    lateinit var drawingView: DrawingView
+    private lateinit var drawingView: DrawingView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_echec)
         drawingView = findViewById<DrawingView>(R.id.vMain)
-
-        var tombstone = findViewById<ImageView>(R.id.tombstone)
-        var settings = findViewById<ImageView>(R.id.settings_icon)
-        var container1 = findViewById<FragmentContainerView>(R.id.fragment_container1)
-        var container2 = findViewById<FragmentContainerView>(R.id.fragment_container2)
+        val tombstone = findViewById<ImageView>(R.id.tombstone)
+        val settings = findViewById<ImageView>(R.id.settings_icon)
+        val container1 = findViewById<FragmentContainerView>(R.id.fragment_container1)
+        val container2 = findViewById<FragmentContainerView>(R.id.fragment_container2)
         container1.visibility = View.GONE
         container2.visibility = View.GONE
         val cimFragment = CimFragment()
-        val setFragment = SetFragment()
+        SetFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.fragment_container1,cimFragment)
@@ -33,21 +31,22 @@ class EchecActivity: AppCompatActivity() {
         var hide_fragcim = true
         var hide_fragset = true
         // affichage des noms et création des joueurs
-        val NamePlayerWhite = intent.getStringExtra("joueur blanc")
-        val NamePlayerBlack = intent.getStringExtra("joueur noir")
-        val JoueurBlanc = Joueur(NamePlayerWhite, "white")
-        val JoueurNoir = Joueur(NamePlayerBlack, "black")
-        var PlayerWhite = findViewById<TextView>(R.id.whitePlayer)
-        var PlayerBlack = findViewById<TextView>(R.id.blackPlayer)
-        PlayerWhite.setText(NamePlayerWhite)
-        PlayerBlack.setText(NamePlayerBlack)
+        val namePlayerWhite = intent.getStringExtra("joueur blanc")
+        val namePlayerBlack = intent.getStringExtra("joueur noir")
+        println("$namePlayerBlack + $namePlayerWhite")
+        val JoueurBlanc = Joueur(namePlayerWhite, "white")
+        val JoueurNoir = Joueur(namePlayerBlack, "black")
+        val PlayerWhite = findViewById<TextView>(R.id.whitePlayer)
+        val PlayerBlack = findViewById<TextView>(R.id.blackPlayer)
+        PlayerWhite.text = namePlayerWhite
+        PlayerBlack.text = namePlayerBlack
 
 
         tombstone.setOnClickListener {
             //partie pour le fragment
-            var reset = drawingView.getCimReset()
-            var piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
-            var truc:View? = cimFragment.view
+            val reset = drawingView.getCimReset()
+            val piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
+            val truc:View? = cimFragment.view
             if (truc!=null){
                 cimFragment.UpdateXml(piece_cimetiere, truc)
             }

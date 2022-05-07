@@ -7,11 +7,13 @@ class Reine(position: Case, color: String): Piece(position, color) {
     override fun bouger(newPos: Case, cases: MutableList<Case>): Boolean {
         if (abs(newPos.row - position.row) == abs(newPos.col - position.col) && isDiagonalFree(position, newPos, cases)) {
             if (newPos.piece == null||newPos.piece!!.color != color) {
+                position = newPos
                 return true
             }
         }
         else if((abs(newPos.row - position.row) == 0 && isHorizontalFree(position,newPos,cases)) or (abs(newPos.col - position.col) == 0 && isVerticalFree(position,newPos,cases)) ){
             if (newPos.piece == null||newPos.piece!!.color != color) {
+                position = newPos
                 return true
             }
         }

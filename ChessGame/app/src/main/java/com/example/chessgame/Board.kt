@@ -2,103 +2,69 @@ package com.example.chessgame
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.RectF
-import kotlin.math.abs
 
 
-class Board(var left: Float, var right: Float, var top: Float, var bottom: Float, var view: DrawingView, val context: Context
-)  {
-    var board = RectF(left, top, right,bottom)
+class Board(var left: Float, var right: Float, var top: Float, var bottom: Float, private var view: DrawingView,private val context: Context ){
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
     var cases = mutableListOf<Case>()
-    var paint = Paint()
 
-    fun setRect() {
-        board.set(left, top,
-            right , bottom)
-    }
 
-    fun initialisation() { // crée les cases du board et les pièces
+
+    fun initialisation() {
+        // crée les cases du board et les pièces, met les pièces à leur poisitions initiales
         if(cases.size < 64){
             var compteur = 0
-            var dx = (right-left) / 8
-            var dy = (bottom - top) / 8
-            var x_i = left
-            var y_i = top
+            val dx = (right-left) / 8
+            val dy = (bottom - top) / 8
+            var xi = left
+            var yi = top
             for (i in 1..8) { //lignes
                 for (j in 1..8) { //colonnes
                     var piece: Piece? = null
-                    cases.add(Case(i, j, x_i, y_i, x_i + dx, y_i + dy, view, context))
-                    // création pions blancs
-                    if (i == 7) {
-                        piece = Pion(cases[compteur], "white")
-                    }
-                    // création  pions noirs
-                    else if (i == 2) {
-                        piece = Pion(cases[compteur], "black")
-
-                    }
-                    // création tours blanches
-                    else if (i ==8 && (j == 1 || j == 8) ){
-                        piece = Tour(cases[compteur], "white")
-                    }
-                    //création tours noires
-                    else if (i ==1 && (j == 1 || j == 8) ){
-                        piece = Tour(cases[compteur], "black")
-                    }
-                    //création cavaliers blancs
-                    else if (i ==8 && (j == 2 || j == 7) ){
-                        piece = Cavalier(cases[compteur], "white")
-                    }
-                    //création cavaliers noirs
-                    else if (i ==1 && (j == 2 || j == 7) ){
-                        piece = Cavalier(cases[compteur], "black")
-                    }
-                    // création fous blancs
-                    else if (i ==8 && (j == 3 || j == 6) ){
-                        piece = Fou(cases[compteur], "white")
-                    }
-                    // création fous noirs
-                    else if (i ==1 && (j == 3 || j == 6) ){
-                        piece = Fou(cases[compteur], "black")
-                    }
-                    // création reine blanche
-                    else if (i ==8 && j == 4  ){
-                        piece = Reine(cases[compteur], "white")
-                    }
-                    // création reine noire
-                    else if (i ==1 && j == 4  ){
-                        piece = Reine(cases[compteur], "black")
-                    }
-                    // création roi blanc
-                    else if (i ==8 && j == 5  ){
-                        piece = Roi(cases[compteur], "white")
-                    }
-                    // création roi noir
-                    else if (i ==1 && j == 5 ){
-                        piece = Roi(cases[compteur], "black")
+                    cases.add(Case(i, j, xi, yi, xi + dx, yi + dy, context))
+                    when{
+                        i == 7 -> piece = Pion(cases[compteur], "white")
+                        //pions noirs
+                        i == 2 -> piece = Pion(cases[compteur], "black")
+                        // tours blanches
+                        i ==8 && (j == 1 || j == 8) -> piece = Tour(cases[compteur], "white")
+                        //tours noires
+                        (i ==1 && (j == 1 || j == 8)) -> piece = Tour(cases[compteur], "black")
+                        //cavaliers blancs
+                         (i ==8 && (j == 2 || j == 7)) ->piece = Cavalier(cases[compteur], "white")
+                        //cavaliers noirs
+                        (i ==1 && (j == 2 || j == 7)) -> piece = Cavalier(cases[compteur], "black")
+                        //fous blancs
+                        (i ==8 && (j == 3 || j == 6)) -> piece = Fou(cases[compteur], "white")
+                        //fous noirs
+                        (i ==1 && (j == 3 || j == 6)) -> piece = Fou(cases[compteur], "black")
+                        //reine blanche
+                        (i ==8 && j == 4)-> piece = Reine(cases[compteur], "white")
+                        //reine noire
+                        (i ==1 && j == 4) -> piece = Reine(cases[compteur], "black")
+                        //roi blanc
+                        (i ==8 && j == 5)-> piece = Roi(cases[compteur], "white")
+                        //roi noir
+                        (i ==1 && j == 5)-> piece = Roi(cases[compteur], "black")
                     }
                     cases[compteur].piece = piece
                     compteur += 1
-                    x_i += dx
+                    xi += dx
                 }
-                y_i += dy
-                x_i = left
+                yi += dy
+                xi = left
             }
         }
     }
+
     fun clear(){
-        cases = mutableListOf<Case>()
-        paint = Paint()
+        cases = mutableListOf()
+
         cimetiere.res = true
     }
 
     fun draw(canvas: Canvas) {
-        paint.color = Color.WHITE
-        canvas.drawRect(board, paint)
         for (case in cases){
             case.setRect()
             case.draw(canvas)
@@ -107,30 +73,29 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
 
     fun selection(caseRef:Int , colorier: Boolean){
         cases[caseRef].focus = colorier
+        return
     }
 
     fun bouger(from:Int, to:Int):Boolean{
+        println("move")
         val moved = (cases[from].piece!!.bouger(cases[to], cases))
         if(cases[to].piece != null && moved){
-            if( cases[to].piece is Roi){
-                view.king_dead(cases[to].piece!!.color)
+            if( cases[to].piece is Roi && cases[from].piece !is Tour){
+                view.kingDead(cases[to].piece!!.color)
             }
              if(cases[to].piece!!.color == cases[from].piece!!.color) { //si roque
                 if(cases[to].piece!!.bouger(cases[from],cases)){
-                    var toPos = cases[to].piece!!.position
-                    val tocol = toPos.col
-                    var fromPos = cases[from].piece!!.position
-                    val fromcol = fromPos.col
-                    println("$fromcol $tocol")
+                    val toPos = cases[to].piece!!.position
+                    val fromPos = cases[from].piece!!.position
                     cases[(fromPos.row - 1) * 8 + fromPos.col - 1].piece = cases[from].piece
                     cases[(toPos.row - 1) * 8 + toPos.col - 1].piece = cases[to].piece
                     cases[to].piece = null
                     cases[from].piece = null
-                }
+                    return moved
+                } else return false
             }
             else {
             mourir(cases[to].piece)
-            cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
             cases[from].piece = null
             if (cases[to].piece is Pion ){
@@ -145,7 +110,6 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
         }
 
         else if(moved){
-            cases[from].piece!!.position = cases[to]
             cases[to].piece = cases[from].piece
             cases[from].piece = null
             if (cases[to].piece is Pion){
@@ -160,18 +124,18 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
         return moved
     }
     
-    fun mourir(piece: Piece?){
+    private fun mourir(piece: Piece?){
         cimetiere.ajouterPiece(piece!!)
     }
     fun checkTour():Boolean{
         return partie.tour
     }
 
-    fun ChangeTour(){
+    fun changeTour(){
         partie.changeTour()
     }
 
-    fun QueenBecoming(queencolor: String, to: Int) {
+    private fun QueenBecoming(queencolor: String, to: Int) {
         cases[to].piece = Reine(cases[to], queencolor)
     }
 
