@@ -49,10 +49,9 @@ class EchecActivity: AppCompatActivity() {
         tombstone.setOnClickListener {
             //partie pour le fragment
             val reset = drawingView.getCimReset()
-            val piece_cimetiere: MutableList<Piece> = drawingView.getCimetiere()
             val truc:View? = cimFragment.view
             if (truc!=null){
-                cimFragment.UpdateXml(piece_cimetiere, truc)
+                cimFragment.UpdateXml(drawingView.getCimetiere(), truc)
             }
             //partie pour afficher le cimetière ou le cacher
             if (hide_fragcim){

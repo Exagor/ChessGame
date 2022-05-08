@@ -13,7 +13,7 @@ abstract class Piece(var position: Case, val color: String){
         for (i in 1..ecart) {
             val nextCol = if (to.col > from.col) from.col + i else from.col - i
             val nextRow = if (to.row > from.row) from.row + i else from.row - i
-            if (cases[(nextRow-1)*8 + nextCol-1].piece != null) {
+            if (cases[(nextRow-1)*8 + nextCol-1].getPiece() != null) {
                 return false
             }
         }
@@ -25,7 +25,7 @@ abstract class Piece(var position: Case, val color: String){
         if (ecart == 0 ) return true
         for (i in 1..ecart) {
             val nextRow = if (to.row > from.row) from.row + i else from.row - i
-            if (cases[(nextRow-1)*8 + from.col-1].piece != null) {
+            if (cases[(nextRow-1)*8 + from.col-1].getPiece() != null) {
                 return false
             }
         }
@@ -37,7 +37,7 @@ abstract class Piece(var position: Case, val color: String){
         if (ecart == 0 ) return true
         for (i in 1..ecart) {
             val nextCol = if (to.col > from.col) from.col + i else from.col - i
-            if (cases[(from.row-1)*8 + nextCol-1].piece != null) {
+            if (cases[(from.row-1)*8 + nextCol-1].getPiece() != null) {
                 return false
             }
         }

@@ -4,7 +4,7 @@ class Pion(position: Case, color: String): Piece(position, color) {
     override var image = if (color == "white") R.drawable.w_pawn_png_512px else R.drawable.b_pawn_png_512px
     override fun bouger(newPos:Case, cases: MutableList<Case>): Boolean {
         // se déplacer tout droit
-        if (position.col == newPos.col && newPos.piece == null ) {
+        if (position.col == newPos.col && newPos.getPiece() == null ) {
             //part de sa position de déprt
             if (position.row == 2 && color == "black" &&(newPos.row == 3 || newPos.row == 4)) {
                 position = newPos
@@ -20,7 +20,7 @@ class Pion(position: Case, color: String): Piece(position, color) {
             }
         }
         //se déplace en diagonale
-        else if (newPos.piece!= null &&(position.col == newPos.col +1 || position.col == newPos.col -1) && newPos.piece!!.color != color &&
+        else if (newPos.getPiece()!= null &&(position.col == newPos.col +1 || position.col == newPos.col -1) && newPos.getPiece()!!.color != color &&
             ((color == "black" && newPos.row == position.row +1)|| (color == "white" && newPos.row +1 == position.row ))){
             position= newPos
             return true

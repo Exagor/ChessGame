@@ -7,7 +7,7 @@ class Roi(position: Case, color: String): Piece(position, color), Roque {
     override var image = if (color == "white") R.drawable.w_king_png_512px else R.drawable.b_king_png_512px
     override fun bouger(newPos: Case,cases : MutableList<Case>): Boolean{
         // peut se déplacer
-        if(newPos.piece == null || newPos.piece!!.color != color){
+        if(newPos.getPiece() == null || newPos.getPiece()!!.color != color){
             val deltaCol = abs(position.col - newPos.col)
             val deltaRow = abs(position.row - newPos.row)
             if( deltaCol == 1 && deltaRow == 1 || deltaCol + deltaRow == 1){
@@ -15,7 +15,7 @@ class Roi(position: Case, color: String): Piece(position, color), Roque {
                 return true
             }
         }
-        else if (newPos.piece != null && newPos.piece!!.color == color){
+        else if (newPos.getPiece() != null && newPos.getPiece()!!.color == color){
             if(RoqueValide((position.row-1)*8 +position.col -1,(newPos.row-1)*8 +newPos.col -1, cases)){
                 return true
             }
@@ -25,12 +25,12 @@ class Roi(position: Case, color: String): Piece(position, color), Roque {
     }
 
     override fun RoqueValide(caseRoi: Int, caseTour: Int, cases: MutableList<Case>): Boolean {
-            if (cases[caseTour].piece !is Tour) return false
-            if (cases[caseTour].piece!!.color != cases[caseRoi].piece!!.color) return false
+            if (cases[caseTour].getPiece() !is Tour) return false
+            if (cases[caseTour].getPiece()!!.color != cases[caseRoi].getPiece()!!.color) return false
             val from = if(caseRoi< caseTour)  caseRoi else caseTour
             val to = if( from == caseRoi) caseTour else caseRoi
             for (i in (from+1)..(to-1)){
-                if (cases[i].piece != null){
+                if (cases[i].getPiece() != null){
                     return false
                 }
             }

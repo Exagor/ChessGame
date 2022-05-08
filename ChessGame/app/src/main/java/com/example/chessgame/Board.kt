@@ -50,7 +50,7 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
                         //roi noir
                         (i ==1 && j == 5)-> piece = Roi(cases[compteur], "black")
                     }
-                    cases[compteur].piece = piece
+                    cases[compteur].setPiece(piece)
                     compteur += 1
                     xi += dx
                 }
@@ -77,37 +77,36 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
     }
 
     fun selection(caseRef:Int , colorier: Boolean){
-        cases[caseRef].focus = colorier
-        return
+        cases[caseRef].setFocus(colorier)
     }
 
     fun bouger(from:Int, to:Int):Boolean{
         println("move")
-        val moved = (cases[from].piece!!.bouger(cases[to], cases))
-        if(cases[to].piece != null && moved){
-            if( cases[to].piece is Roi && cases[from].piece !is Tour){
-                view.kingDead(cases[to].piece!!.color)
+        val moved = (cases[from].getPiece()!!.bouger(cases[to], cases))
+        if(cases[to].getPiece() != null && moved){
+            if( cases[to].getPiece() is Roi && cases[from].getPiece() !is Tour){
+                view.kingDead(cases[to].getPiece()!!.color)
             }
-             if(cases[to].piece!!.color == cases[from].piece!!.color) { //si roque
-                if(cases[to].piece!!.bouger(cases[from],cases)){
-                    val toPos = cases[to].piece!!.position
-                    val fromPos = cases[from].piece!!.position
-                    cases[(fromPos.row - 1) * 8 + fromPos.col - 1].piece = cases[from].piece
-                    cases[(toPos.row - 1) * 8 + toPos.col - 1].piece = cases[to].piece
-                    cases[to].piece = null
-                    cases[from].piece = null
+             if(cases[to].getPiece()!!.color == cases[from].getPiece()!!.color) { //si roque
+                if(cases[to].getPiece()!!.bouger(cases[from],cases)){
+                    val toPos = cases[to].getPiece()!!.position
+                    val fromPos = cases[from].getPiece()!!.position
+                    cases[(fromPos.row - 1) * 8 + fromPos.col - 1].setPiece(cases[from].getPiece())
+                    cases[(toPos.row - 1) * 8 + toPos.col - 1].setPiece(cases[to].getPiece())
+                    cases[to].retirerPiece()
+                    cases[from].retirerPiece()
                     return moved
                 } else return false
             }
             else {
-            mourir(cases[to].piece)
-            cases[to].piece = cases[from].piece
-            cases[from].piece = null
-            if (cases[to].piece is Pion ){
-                if ( to<8  && cases[to].piece!!.color=="white"){
+            mourir(cases[to].getPiece())
+            cases[to].setPiece(cases[from].getPiece())
+            cases[from].retirerPiece()
+            if (cases[to].getPiece() is Pion ){
+                if ( to<8  && cases[to].getPiece()!!.color=="white"){
                     QueenBecoming("white", to)}
 
-                else if (to>55 && cases[to].piece!!.color=="black"  ){
+                else if (to>55 && cases[to].getPiece()!!.color=="black"  ){
                     QueenBecoming("black", to)
                 }
             }
@@ -115,13 +114,13 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
         }
 
         else if(moved){
-            cases[to].piece = cases[from].piece
-            cases[from].piece = null
-            if (cases[to].piece is Pion){
-                if ( to<8  && cases[to].piece!!.color=="white"){
+            cases[to].setPiece(cases[from].getPiece())
+            cases[from].retirerPiece()
+            if (cases[to].getPiece() is Pion){
+                if ( to<8  && cases[to].getPiece()!!.color=="white"){
                     QueenBecoming("white", to)}
 
-                else if (to>55 && cases[to].piece!!.color=="black"  ){
+                else if (to>55 && cases[to].getPiece()!!.color=="black"  ){
                     QueenBecoming("black", to)
                 }
             }
@@ -141,7 +140,7 @@ class Board(var left: Float, var right: Float, var top: Float, var bottom: Float
     }
 
     private fun QueenBecoming(queencolor: String, to: Int) {
-        cases[to].piece = Reine(cases[to], queencolor)
+        cases[to].setPiece(Reine(cases[to], queencolor))
     }
 
 

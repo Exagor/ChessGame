@@ -8,7 +8,7 @@ class Cavalier(position: Case, color: String): Piece(position, color) {
     override fun bouger(newPos: Case, cases: MutableList<Case>): Boolean {
         if (abs(newPos.col - position.col)== 2 && abs(newPos.row - position.row) == 1
             ||abs(newPos.col - position.col)== 1 && abs(newPos.row - position.row) == 2 ){
-            if (newPos.piece == null ||newPos.piece!!.color != color) {
+            if (newPos.getPiece() == null ||newPos.getPiece()!!.color != color) {
                 position= newPos
                 return  true
             }

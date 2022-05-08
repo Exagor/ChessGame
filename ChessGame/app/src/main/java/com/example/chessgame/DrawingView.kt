@@ -88,14 +88,12 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         }
     }
 
-
     fun pause() {
         thread.join()
     }
     fun resume() {
         thread = Thread(this)
         thread.start()
-
     }
 
     override fun run() {
@@ -112,7 +110,6 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
         board.top = (screenHeight-side)/2
         board.bottom = (screenHeight+side)/2
         board.initialisation()
-
     }
 
 
@@ -146,8 +143,8 @@ class DrawingView @JvmOverloads constructor (context: Context, attributes: Attri
                     val col = case.col
                     val row = case.row
 
-                    if ((board.checkTour() && case.piece?.color == "white") or (!board.checkTour() && case.piece?.color == "black")){
-                        if (onfocus == null && case.piece != null) {
+                    if ((board.checkTour() && case.getPiece()?.color == "white") or (!board.checkTour() && case.getPiece()?.color == "black")){
+                        if (onfocus == null && case.getPiece() != null) {
                             onfocus = (row - 1) * 8 + col - 1
                             board.selection(onfocus!!, true)
                             draw()
