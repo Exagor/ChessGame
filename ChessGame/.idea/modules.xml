@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ChessGame.iml" filepath="$PROJECT_DIR$/.idea/modules/ChessGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ChessGame.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ChessGame.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ChessGame.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ChessGame.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ChessGame.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ChessGame.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ChessGame.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ChessGame.app.unitTest.iml" />
     </modules>
   </component>
 </project>

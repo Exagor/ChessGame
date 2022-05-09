@@ -38,8 +38,6 @@ class EchecActivity: AppCompatActivity() {
         val namePlayerWhite = intent.getStringExtra("joueur blanc")
         val namePlayerBlack = intent.getStringExtra("joueur noir")
         println("$namePlayerBlack + $namePlayerWhite")
-        val JoueurBlanc = Joueur(namePlayerWhite, "white")
-        val JoueurNoir = Joueur(namePlayerBlack, "black")
         val PlayerWhite = findViewById<TextView>(R.id.whitePlayer)
         val PlayerBlack = findViewById<TextView>(R.id.blackPlayer)
         PlayerWhite.text = namePlayerWhite

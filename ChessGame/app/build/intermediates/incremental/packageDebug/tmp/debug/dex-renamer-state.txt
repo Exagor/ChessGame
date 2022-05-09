@@ -1,4 +1,4 @@
-#Sun May 08 16:42:21 CEST 2022
+#Mon May 09 18:15:25 CEST 2022
 base.2=C\:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 path.2=7/classes.dex
 base.1=C\:\\Users\\alexa\\AndroidStudioProjects\\ChessGameGithub\\ChessGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
