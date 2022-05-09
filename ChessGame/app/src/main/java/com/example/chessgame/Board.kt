@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 
 
-class Board(var left: Float, var right: Float, var top: Float, var bottom: Float, private var view: DrawingView,private val context: Context ){
+class Board(var left: Float, var right: Float, var top: Float, var bottom: Float, private var view: ChessView,private val context: Context ){
     val cimetiere =Cimetiere(mutableListOf())
     var partie = Partie()
     var cases = mutableListOf<Case>()

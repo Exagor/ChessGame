@@ -9,20 +9,20 @@ import androidx.fragment.app.FragmentContainerView
 
 class EchecActivity: AppCompatActivity() {
 
-    private lateinit var drawingView: DrawingView
+    private lateinit var chessView: ChessView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_echec)
-        drawingView = findViewById<DrawingView>(R.id.vMain)
+        chessView = findViewById<ChessView>(R.id.vMain)
         val tombstone = findViewById<ImageView>(R.id.tombstone)
         val settings = findViewById<ImageView>(R.id.settings_icon)
         val container1 = findViewById<FragmentContainerView>(R.id.fragment_container1)
         val container2 = findViewById<FragmentContainerView>(R.id.fragment_container2)
         var scorew = findViewById<TextView>(R.id.scorew)
         var scoreb = findViewById<TextView>(R.id.scoreb)
-        drawingView.scorew = scorew
-        drawingView.scoreb = scoreb
+        chessView.scorew = scorew
+        chessView.scoreb = scoreb
         container1.visibility = View.GONE
         container2.visibility = View.GONE
         val cimFragment = CimFragment()
@@ -46,10 +46,10 @@ class EchecActivity: AppCompatActivity() {
 
         tombstone.setOnClickListener {
             //partie pour le fragment
-            val reset = drawingView.getCimReset()
+            val reset = chessView.getCimReset()
             val truc:View? = cimFragment.view
             if (truc!=null){
-                cimFragment.UpdateXml(drawingView.getCimetiere(), truc)
+                cimFragment.UpdateXml(chessView.getCimetiere(), truc)
             }
             //partie pour afficher le cimetière ou le cacher
             if (hide_fragcim){
@@ -77,16 +77,16 @@ class EchecActivity: AppCompatActivity() {
         }
     }
     fun ClickReset(){
-        drawingView.newGame()
+        chessView.newGame()
     }
 
     override fun onPause() {
         super.onPause()
-        drawingView.pause()
+        chessView.pause()
     }
 
     override fun onResume() {
         super.onResume()
-        drawingView.resume()
+        chessView.resume()
     }
 }
